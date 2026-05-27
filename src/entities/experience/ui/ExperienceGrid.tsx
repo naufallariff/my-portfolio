@@ -3,10 +3,10 @@ import { Experience } from '../model/types';
 
 interface Props {
     experiences: Experience[];
-    lang: string;
+    lang?: string;
 }
 
-export function ExperienceGrid({ experiences, lang }: Props) {
+export function ExperienceGrid({ experiences }: Props) {
     if (experiences.length === 0) {
         return (
             <p className="py-20 text-center text-sm text-(--color-text-secondary)">

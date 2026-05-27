@@ -7,13 +7,11 @@ import { CompetenciesSection } from '@/widgets/competencies/ui/CompetenciesSecti
 
 export default async function HomePage({
     params,
-    searchParams,
 }: {
     params: Promise<{ lang: string }>;
     searchParams: Promise<{ domain?: string }>;
 }) {
     const { lang } = await params;
-    const { domain } = await searchParams;
     const dict = await getDictionary(lang as 'en' | 'id' | 'zh' | 'ar');
 
     return (

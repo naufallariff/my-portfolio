@@ -1,7 +1,20 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import '../globals.css';
 import { ThemeProvider } from '@/features/theme-switcher/ui/ThemeProvider';
+
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-sans',
+    display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+    subsets: ['latin'],
+    variable: '--font-mono',
+    display: 'swap',
+});
 
 export async function generateStaticParams() {
     return [{ lang: 'en' }, { lang: 'id' }, { lang: 'zh' }, { lang: 'ar' }];
@@ -23,7 +36,6 @@ export default async function RootLayout({
     const { lang } = await params;
     const isRTL = lang === 'ar';
 
-    // Membaca preferensi tema langsung dari Cookies di server
     const cookieStore = await cookies();
     const design = cookieStore.get('theme-design')?.value || 'modern';
     const palette = cookieStore.get('theme-palette')?.value || 'light';
@@ -35,16 +47,10 @@ export default async function RootLayout({
             data-theme={design}
             data-palette={palette}
             suppressHydrationWarning
+            className={`${inter.variable} ${jetbrainsMono.variable}`}
         >
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
-                    rel="stylesheet"
-                />
-            </head>
-            <body className="antialiased">
+            <head />
+            <body className="antialiased font-sans">
                 <ThemeProvider>
                     {children}
                 </ThemeProvider>
