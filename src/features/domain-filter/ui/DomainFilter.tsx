@@ -2,18 +2,30 @@
 
 import { useSearchParams, useRouter } from 'next/navigation';
 
-const domains = [
-    { code: 'all', label: 'All' },
-    { code: 'ai', label: 'AI & Data' },
-    { code: 'engineering', label: 'Engineering' },
-    { code: 'audit', label: 'Audit' },
-    { code: 'education', label: 'Education' },
-];
+interface DomainFilterProps {
+    dict: {
+        domain: {
+            all: string;
+            ai: string;
+            engineering: string;
+            audit: string;
+            education: string;
+        };
+    };
+}
 
-export function DomainFilter() {
+export function DomainFilter({ dict }: DomainFilterProps) {
     const searchParams = useSearchParams();
     const router = useRouter();
     const active = searchParams.get('domain') || 'all';
+
+    const domains = [
+        { code: 'all', label: dict.domain.all },
+        { code: 'ai', label: dict.domain.ai },
+        { code: 'engineering', label: dict.domain.engineering },
+        { code: 'audit', label: dict.domain.audit },
+        { code: 'education', label: dict.domain.education },
+    ];
 
     const handleChange = (code: string) => {
         const params = new URLSearchParams(searchParams.toString());

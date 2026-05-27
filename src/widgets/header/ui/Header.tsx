@@ -1,4 +1,3 @@
-// src/widgets/header/ui/Header.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -15,10 +14,20 @@ const languages = [
 
 interface HeaderProps {
     lang: string;
-    // dict tidak digunakan di sini, bisa dihapus atau dipertahankan untuk masa depan
+    dict: {
+        header: {
+            brand: string;
+            ariaThemeSwitch: string;
+            ariaLanguageSelect: string;
+            ariaSettings: string;
+            designMode: string;
+            minimalist: string;
+            liquidGlass: string;
+        };
+    };
 }
 
-export function Header({ lang }: HeaderProps) {
+export function Header({ lang, dict }: HeaderProps) {
     const router = useRouter();
     const pathname = usePathname();
     const { design, palette, setDesign, setPalette } = useThemeStore();
@@ -51,31 +60,27 @@ export function Header({ lang }: HeaderProps) {
                 }`}
         >
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                {/* Logo / Nama */}
                 <button
                     onClick={() => router.push(`/${lang}`)}
                     className="text-sm font-semibold tracking-tight text-(--color-text-primary)"
                 >
-                    M. Naufal Arif
+                    {dict.header.brand}
                 </button>
 
-                {/* Kontrol Kanan */}
                 <div className="flex items-center gap-4">
-                    {/* Toggle Dark/Light */}
                     <button
                         onClick={toggleTheme}
                         className="rounded-full p-2 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                        aria-label={palette === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+                        aria-label={dict.header.ariaThemeSwitch}
                     >
                         {palette === 'light' ? <Moon size={18} /> : <Sun size={18} />}
                     </button>
 
-                    {/* Language Dropdown */}
                     <div className="relative">
                         <button
                             onClick={() => { setLangOpen(!langOpen); setSettingsOpen(false); }}
                             className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                            aria-label="Select language"
+                            aria-label={dict.header.ariaLanguageSelect}
                         >
                             <Globe size={16} />
                             <span className="hidden sm:inline">{lang.toUpperCase()}</span>
@@ -96,31 +101,30 @@ export function Header({ lang }: HeaderProps) {
                         )}
                     </div>
 
-                    {/* Settings (Design Mode) */}
                     <div className="relative">
                         <button
                             onClick={() => { setSettingsOpen(!settingsOpen); setLangOpen(false); }}
                             className="rounded-full p-2 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                            aria-label="Settings"
+                            aria-label={dict.header.ariaSettings}
                         >
                             <Settings size={18} />
                         </button>
                         {settingsOpen && (
                             <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white dark:bg-[#1C1C1E] shadow-xl border border-black/5 dark:border-white/10 p-2 backdrop-blur-xl">
                                 <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-(--color-text-secondary)">
-                                    Design Mode
+                                    {dict.header.designMode}
                                 </p>
                                 <button
                                     onClick={() => setDesign('modern')}
                                     className={`w-full rounded-xl px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${design === 'modern' ? 'font-semibold text-(--color-accent)' : ''}`}
                                 >
-                                    Minimalist
+                                    {dict.header.minimalist}
                                 </button>
                                 <button
                                     onClick={() => setDesign('liquid')}
                                     className={`w-full rounded-xl px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${design === 'liquid' ? 'font-semibold text-(--color-accent)' : ''}`}
                                 >
-                                    Liquid Glass
+                                    {dict.header.liquidGlass}
                                 </button>
                             </div>
                         )}

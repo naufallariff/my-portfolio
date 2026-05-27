@@ -1,27 +1,144 @@
 {
-  "meta": {
-    "title": "Muhammad Naufal Arif — Software Architect & QA Specialist",
-    "description": "Ensuring spatial data precision for autonomous AI and building scalable web systems."
-  },
-  "hero": {
-    "name": "Muhammad Naufal Arif",
-    "role": "Software Architect & QA Specialist",
-    "valueProp": "Ensuring spatial data precision for autonomous AI and building scalable web systems.",
-    "location": "Jakarta, Indonesia"
-  },
-  "nav": {
-    "home": "Home",
-    "experience": "Experience",
-    "garden": "Digital Garden",
-    "blueprint": "Living Blueprint",
-    "language": "Language",
-    "settings": "Settings"
-  },
-  "domain": {
-    "ai": "AI & Data Infrastructure",
-    "engineering": "Software Architecture",
-    "audit": "Systems Auditing",
-    "education": "Knowledge Transfer"
-  },
-  "enOnlyNotice": "Technical documentation is available only in English."
+    "meta": {
+        "title": "Muhammad Naufal Arif — Software Architect & QA Specialist",
+        "description": "Ensuring spatial data precision for autonomous AI and building scalable web systems."
+    },
+    "header": {
+        "brand": "M. Naufal Arif",
+        "ariaThemeSwitch": "Switch theme",
+        "ariaLanguageSelect": "Select language",
+        "ariaSettings": "Settings",
+        "designMode": "Design Mode",
+        "minimalist": "Minimalist",
+        "liquidGlass": "Liquid Glass"
+    },
+    "hero": {
+        "name": "Muhammad Naufal Arif",
+        "role": "Data Quality Assurance Specialist & Software Engineer",
+        "valueProp": "Building zero-defect data architectures. Auditing autonomous systems. Engineering the web.",
+        "location": "Jakarta, Indonesia",
+        "status": "Available for global opportunities"
+    },
+    "manifesto": {
+        "title": "About",
+        "hook": "I build systems, and I make sure they run flawlessly.",
+        "narrative": "Currently a Data Quality Assurance Specialist for a Tier-1 global Autonomous Driving project. This role demands absolute precision, zero-defect tolerance, and rigorous consistency across complex 3D spatial data. Before diving into AI data infrastructure, I built my logical foundation through full-stack web engineering. My experience as an Internal Audit Administrator gave me a macro perspective on business processes, while my role as a Teaching Talent honed my technical communication skills.",
+        "valueProposition": "I combine an engineer's logic, an auditor's sharp eye, and the rigorous quality standards required for modern AI."
+    },
+    "competencies": {
+        "title": "Core Competencies",
+        "ai": {
+            "title": "AI Data Infrastructure",
+            "skills": [
+                "Quality Assurance",
+                "Spatio-Temporal Tracking",
+                "3D Point Cloud Processing",
+                "Data Integrity Validation"
+            ]
+        },
+        "engineering": {
+            "title": "Software Engineering",
+            "frontend": "Frontend: React.js, Next.js, Tailwind CSS, TypeScript",
+            "backend": "Backend: Node.js, Express.js, Go (Gin), Python (Flask)",
+            "architecture": "Architecture: Feature-Sliced Design, Layered Architecture",
+            "databases": "Databases: PostgreSQL, MySQL, SQLite"
+        },
+        "tools": {
+            "title": "System & Tools",
+            "list": [
+                "Git",
+                "Vercel",
+                "Postman",
+                "Figma"
+            ]
+        }
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "present": "Present",
+        "jobs": [
+            {
+                "title": "Data Quality Assurance Specialist",
+                "company": "PT Daligent Solusi Indonesia (KUPU ID)",
+                "date": "Feb 2026",
+                "endDate": "Present",
+                "description": "Managing data integrity for a Tier-1 global Autonomous Driving AI model. Auditing complex 3D point cloud segmentation (Semantic OCC) and preventing temporal tracking failures (ID-Switches) across thousands of dynamic objects in 360° multi-camera views (ODN)."
+            },
+            {
+                "title": "Data Annotator",
+                "company": "PT Daligent Solusi Indonesia (KUPU ID)",
+                "date": "Feb 2026",
+                "endDate": "Apr 2026",
+                "description": "Processed complex 4D spatio-temporal datasets. Ensured pixel-perfect annotations and sensor fusion alignment between LiDAR and cameras for 4D Traffic Sign Reflectivity (TSR)."
+            },
+            {
+                "title": "Teaching Talent",
+                "company": "Akademia by Ruangguru (UOB My Digital Space)",
+                "date": "Oct 2025",
+                "endDate": "May 2026",
+                "description": "Mentored students in web development fundamentals, emphasizing technical communication and clear documentation."
+            },
+            {
+                "title": "Internal Audit Administrator",
+                "company": "PT Panca Mitra Prima Sejahtera",
+                "date": "Nov 2025",
+                "endDate": "Jan 2026",
+                "description": "Supported the audit team in data collection and analysis, gaining a macro perspective on complex business processes and legacy systems."
+            }
+        ]
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "list": [
+            {
+                "title": "Phianova v3",
+                "subtitle": "Cyber UI & AI Persona",
+                "tech": "Next.js, AI API",
+                "description": "A dynamic AI persona interface built with a strict 'Cyber UI' theme. The core architecture focuses on a robust short-term memory system that resets per session, prioritizing immediate context handling over long-term storage."
+            },
+            {
+                "title": "Uwais Telur",
+                "subtitle": "Sales Transaction System",
+                "tech": "Node.js, Express.js, EJS, SQLite",
+                "description": "A full-stack sales transaction system developed using Rapid Application Development (RAD). Features include transaction recording, supplier/customer management, stock monitoring, and invoice generation."
+            },
+            {
+                "title": "Dialectica",
+                "subtitle": "AI Digital Library",
+                "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
+                "description": "A digital library platform integrated with an AI-powered chatbot for reflective book discussions. Built with a responsive 3-panel interface and simulated Web3 login."
+            },
+            {
+                "title": "Industrix-Todo",
+                "subtitle": "Layered Architecture Demo",
+                "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
+                "description": "A task management application demonstrating strong architectural principles, utilizing Layered Architecture on the backend and a modular frontend."
+            }
+        ]
+    },
+    "education": {
+        "title": "Education & Certifications",
+        "degree": {
+            "title": "Bachelor of Information Systems",
+            "school": "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
+            "date": "Sep 2021 – Sep 2025",
+            "detail": "Cumlaude (GPA 3.82). Published research on sales transaction systems in Indonesian Journal of Computer Science."
+        },
+        "certifications": [
+            "Code Generation and Optimization Using IBM Granite — IBM SkillsBuild (2025)",
+            "Independent Study - Web Backend Developer — Gamelab Indonesia (2024)",
+            "Independent Study - Web Development — Infinite Learning (2023)"
+        ]
+    },
+    "domain": {
+        "all": "All",
+        "ai": "AI & Data",
+        "engineering": "Engineering",
+        "audit": "Audit",
+        "education": "Education"
+    },
+    "footer": {
+        "copyright": "© 2026 Muhammad Naufal Arif. All rights reserved."
+    },
+    "enOnlyNotice": "Technical documentation is available only in English."
 }
