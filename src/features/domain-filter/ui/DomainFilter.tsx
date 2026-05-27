@@ -1,14 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useSearchParams, useRouter } from 'next/navigation';
 
 const domains = [
-    { code: 'all', label: 'All', icon: '⊞' },
-    { code: 'ai', label: 'AI & Data', icon: '◈' },
-    { code: 'engineering', label: 'Engineering', icon: '⌨' },
-    { code: 'audit', label: 'Audit', icon: '◎' },
-    { code: 'education', label: 'Education', icon: '♢' },
+    { code: 'all', label: 'All' },
+    { code: 'ai', label: 'AI & Data' },
+    { code: 'engineering', label: 'Engineering' },
+    { code: 'audit', label: 'Audit' },
+    { code: 'education', label: 'Education' },
 ];
 
 export function DomainFilter() {
@@ -18,37 +17,25 @@ export function DomainFilter() {
 
     const handleChange = (code: string) => {
         const params = new URLSearchParams(searchParams.toString());
-        if (code === 'all') {
-            params.delete('domain');
-        } else {
-            params.set('domain', code);
-        }
+        if (code === 'all') params.delete('domain');
+        else params.set('domain', code);
         router.push(`?${params.toString()}`, { scroll: false });
     };
 
     return (
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter domain">
+        <div className="flex flex-wrap justify-center gap-2" role="tablist">
             {domains.map((d) => (
                 <button
                     key={d.code}
                     onClick={() => handleChange(d.code)}
-                    className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active === d.code
-                            ? 'bg-(--color-accent) text-black'
-                            : 'border border-(--color-border) text-(--color-text) hover:border-(--color-accent)'
+                    className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${active === d.code
+                            ? 'bg-(--color-accent) text-white'
+                            : 'text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-border)'
                         }`}
                     role="tab"
                     aria-selected={active === d.code}
                 >
-                    <span className="mr-1">{d.icon}</span>
                     {d.label}
-                    {active === d.code && (
-                        <motion.div
-                            layoutId="activeDomainTab"
-                            className="absolute inset-0 rounded-full bg-(--color-accent)"
-                            style={{ zIndex: -1 }}
-                            transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-                        />
-                    )}
                 </button>
             ))}
         </div>

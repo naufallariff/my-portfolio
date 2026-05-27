@@ -1,25 +1,27 @@
 {
   "meta": {
-    "title": "系统工作空间 | Muhammad Naufal Arif",
-    "description": "系统构建者 — AI数据基础设施、软件架构、审计与知识转移。"
+    "title": "Muhammad Naufal Arif — 软件架构师与质量保障专家",
+    "description": "为自主AI确保空间数据精准度，构建高可扩展性Web系统。"
   },
   "hero": {
-    "greeting": "系统启动中...",
-    "title": "系统工作空间",
-    "subtitle": "系统构建者 — AI数据基础设施、软件架构、审计",
-    "status": "[SYS_OK] 管道活跃"
+    "name": "Muhammad Naufal Arif",
+    "role": "软件架构师与质量保障专家",
+    "valueProp": "为自主AI确保空间数据精准度，构建高可扩展性Web系统。",
+    "location": "印尼 · 雅加达"
   },
   "nav": {
     "home": "首页",
+    "experience": "履历里程",
     "garden": "数字花园",
-    "blueprint": "活蓝图",
-    "language": "语言"
+    "blueprint": "动态蓝图",
+    "language": "语言切换",
+    "settings": "系统设置"
   },
   "domain": {
-    "ai": "AI与数据基础设施",
-    "engineering": "软件架构",
-    "audit": "系统审计",
-    "education": "知识转移"
+    "ai": "AI 与数据基础设施",
+    "engineering": "软件系统架构",
+    "audit": "系统审计与质检",
+    "education": "知识赋能与传递"
   },
-  "enOnlyNotice": "[EN-Only] 技术文档仅提供英文版本以确保精确性和全球标准。"
+  "enOnlyNotice": "技术文档仅提供英文版本。"
 }

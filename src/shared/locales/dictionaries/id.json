@@ -1,25 +1,27 @@
 {
-    "meta": {
-        "title": "The System Workspace | Muhammad Naufal Arif",
-        "description": "Pembangun Sistem — Infrastruktur Data AI, Arsitektur Perangkat Lunak, Audit, dan Transfer Pengetahuan."
-    },
-    "hero": {
-        "greeting": "SISTEM DIMULAI...",
-        "title": "THE SYSTEM WORKSPACE",
-        "subtitle": "Pembangun Sistem — Infrastruktur Data AI, Arsitektur Perangkat Lunak, Audit",
-        "status": "[SYS_OK] Pipeline Aktif"
-    },
-    "nav": {
-        "home": "Beranda",
-        "garden": "Taman Digital",
-        "blueprint": "Cetak Biru",
-        "language": "Bahasa"
-    },
-    "domain": {
-        "ai": "Infrastruktur Data AI",
-        "engineering": "Arsitektur Perangkat Lunak",
-        "audit": "Audit Sistem",
-        "education": "Transfer Pengetahuan"
-    },
-    "enOnlyNotice": "[EN-Only] Dokumentasi teknis hanya tersedia dalam bahasa Inggris demi presisi dan standar global."
+  "meta": {
+    "title": "Muhammad Naufal Arif — Software Architect & QA Specialist",
+    "description": "Memastikan presisi data spasial untuk AI otonom dan membangun arsitektur sistem web skala besar."
+  },
+  "hero": {
+    "name": "Muhammad Naufal Arif",
+    "role": "Software Architect & QA Specialist",
+    "valueProp": "Memastikan presisi data spasial untuk AI otonom dan membangun arsitektur sistem web skala besar.",
+    "location": "Jakarta, Indonesia"
+  },
+  "nav": {
+    "home": "Beranda",
+    "experience": "Rekam Jejak",
+    "garden": "Digital Garden",
+    "blueprint": "Cetak Biru",
+    "language": "Bahasa",
+    "settings": "Pengaturan"
+  },
+  "domain": {
+    "ai": "Infrastruktur Data & AI",
+    "engineering": "Arsitektur Perangkat Lunak",
+    "audit": "Audit Sistem",
+    "education": "Diseminasi Pengetahuan"
+  },
+  "enOnlyNotice": "Dokumentasi teknis hanya tersedia dalam Bahasa Inggris."
 }
