@@ -18,7 +18,10 @@ export function ExperienceTimeline({ dict }: ExperienceTimelineProps) {
     return (
         <div className="space-y-8">
             {dict.experience.jobs.map((job, i) => (
-                <div key={i} className="glass p-6 md:p-8 rounded-(--radius-card)">
+                <div
+                    key={i}
+                    className="glass p-6 md:p-8 rounded-(--radius-card) pressable"
+                >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                         <h3 className="text-lg font-semibold text-(--color-text-primary)">
                             {job.title}

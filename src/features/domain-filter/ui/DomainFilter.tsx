@@ -40,8 +40,8 @@ export function DomainFilter({ dict }: DomainFilterProps) {
                 <button
                     key={d.code}
                     onClick={() => handleChange(d.code)}
-                    className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${active === d.code
-                            ? 'bg-(--color-accent) text-white'
+                    className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${active === d.code
+                            ? 'bg-(--color-accent) text-white shadow-sm'
                             : 'text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-border)'
                         }`}
                     role="tab"
