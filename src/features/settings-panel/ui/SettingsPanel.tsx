@@ -13,14 +13,13 @@ const languages = [
 ];
 
 const designThemes = [
-    { code: 'minimal' as const, label: 'Minimalist', desc: 'Soft & Structural' },
-    { code: 'glass' as const, label: 'Liquid Glass', desc: 'Tactile & Premium' },
+    { code: 'modern' as const, label: 'Modern', desc: 'Solid & Clean' },
+    { code: 'liquid' as const, label: 'Liquid Glass', desc: 'Translucent & Deep' },
 ];
 
-const colorThemes = [
-    { code: 'clinical' as const, label: 'Clinical Light', desc: '#F5F5F7' },
-    { code: 'oled' as const, label: 'OLED Dark', desc: '#000000' },
-    { code: 'determinate' as const, label: 'Determinate', desc: 'Algorithmic' },
+const paletteThemes = [
+    { code: 'light' as const, label: 'Light', desc: 'Apple Silver' },
+    { code: 'dark' as const, label: 'Dark', desc: 'OLED Black' },
 ];
 
 // --- Komponen Dropdown ---
@@ -93,7 +92,7 @@ function Dropdown<T extends string>({
 
 // --- Komponen Utama ---
 export function SettingsPanel({ currentLang }: { currentLang: string }) {
-    const { design, color, setDesign, setColor } = useThemeStore();
+    const { design, palette, setDesign, setPalette } = useThemeStore();
     const router = useRouter();
     const pathname = usePathname();
 
@@ -109,7 +108,7 @@ export function SettingsPanel({ currentLang }: { currentLang: string }) {
             <div className="space-y-4">
                 <Dropdown label="Language" options={languages} current={currentLang} onChange={handleLanguageChange} />
                 <Dropdown label="Design Theme" options={designThemes} current={design} onChange={setDesign} />
-                <Dropdown label="Color Theme" options={colorThemes} current={color} onChange={setColor} />
+                <Dropdown label="Palette" options={paletteThemes} current={palette} onChange={setPalette} />
             </div>
         </div>
     );

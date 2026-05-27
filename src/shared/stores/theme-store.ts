@@ -1,23 +1,23 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export type DesignTheme = 'minimal' | 'glass';
-export type ColorTheme = 'clinical' | 'oled' | 'determinate';
+export type DesignTheme = 'modern' | 'liquid';
+export type PaletteTheme = 'light' | 'dark';
 
 interface ThemeState {
     design: DesignTheme;
-    color: ColorTheme;
+    palette: PaletteTheme;
     setDesign: (design: DesignTheme) => void;
-    setColor: (color: ColorTheme) => void;
+    setPalette: (palette: PaletteTheme) => void;
 }
 
 export const useThemeStore = create<ThemeState>()(
     persist(
         (set) => ({
-            design: 'minimal',
-            color: 'clinical',
+            design: 'modern',
+            palette: 'light',
             setDesign: (design) => set({ design }),
-            setColor: (color) => set({ color }),
+            setPalette: (palette) => set({ palette }),
         }),
         {
             name: 'theme-storage',

@@ -5,7 +5,7 @@ export const themeScript = `
       if (stored) {
         const { state } = JSON.parse(stored);
         if (state.design) document.documentElement.setAttribute('data-theme', state.design);
-        if (state.color) document.documentElement.setAttribute('data-color', state.color);
+        if (state.color) document.documentElement.setAttribute('data-palette', state.color);
       }
     } catch(e) {}
   })()
