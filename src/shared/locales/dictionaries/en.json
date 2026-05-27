@@ -1,0 +1,25 @@
+{
+    "meta": {
+        "title": "The System Workspace | Muhammad Naufal Arif",
+        "description": "System Builder — AI Data Infrastructure, Software Architecture, Audit, and Knowledge Transfer."
+    },
+    "hero": {
+        "greeting": "SYSTEM BOOTING...",
+        "title": "THE SYSTEM WORKSPACE",
+        "subtitle": "System Builder — AI Data Infrastructure, Software Architecture, Audit",
+        "status": "[SYS_OK] Pipeline Active"
+    },
+    "nav": {
+        "home": "Home",
+        "garden": "Digital Garden",
+        "blueprint": "Living Blueprint",
+        "language": "Language"
+    },
+    "domain": {
+        "ai": "AI & Data Infrastructure",
+        "engineering": "Software Architecture",
+        "audit": "Systems Auditing",
+        "education": "Knowledge Transfer"
+    },
+    "enOnlyNotice": "[EN-Only] Technical documentation is available only in English to maintain precision and global standard."
+}

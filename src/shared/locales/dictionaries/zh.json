@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "系统工作空间 | Muhammad Naufal Arif",
+    "description": "系统构建者 — AI数据基础设施、软件架构、审计与知识转移。"
+  },
+  "hero": {
+    "greeting": "系统启动中...",
+    "title": "系统工作空间",
+    "subtitle": "系统构建者 — AI数据基础设施、软件架构、审计",
+    "status": "[SYS_OK] 管道活跃"
+  },
+  "nav": {
+    "home": "首页",
+    "garden": "数字花园",
+    "blueprint": "活蓝图",
+    "language": "语言"
+  },
+  "domain": {
+    "ai": "AI与数据基础设施",
+    "engineering": "软件架构",
+    "audit": "系统审计",
+    "education": "知识转移"
+  },
+  "enOnlyNotice": "[EN-Only] 技术文档仅提供英文版本以确保精确性和全球标准。"
+}

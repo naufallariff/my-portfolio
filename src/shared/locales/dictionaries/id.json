@@ -1,0 +1,25 @@
+{
+    "meta": {
+        "title": "The System Workspace | Muhammad Naufal Arif",
+        "description": "Pembangun Sistem — Infrastruktur Data AI, Arsitektur Perangkat Lunak, Audit, dan Transfer Pengetahuan."
+    },
+    "hero": {
+        "greeting": "SISTEM DIMULAI...",
+        "title": "THE SYSTEM WORKSPACE",
+        "subtitle": "Pembangun Sistem — Infrastruktur Data AI, Arsitektur Perangkat Lunak, Audit",
+        "status": "[SYS_OK] Pipeline Aktif"
+    },
+    "nav": {
+        "home": "Beranda",
+        "garden": "Taman Digital",
+        "blueprint": "Cetak Biru",
+        "language": "Bahasa"
+    },
+    "domain": {
+        "ai": "Infrastruktur Data AI",
+        "engineering": "Arsitektur Perangkat Lunak",
+        "audit": "Audit Sistem",
+        "education": "Transfer Pengetahuan"
+    },
+    "enOnlyNotice": "[EN-Only] Dokumentasi teknis hanya tersedia dalam bahasa Inggris demi presisi dan standar global."
+}

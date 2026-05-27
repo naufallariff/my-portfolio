@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* =============================================
+   THE SYSTEM WORKSPACE — Dual Theme System
+   Tailwind CSS v4 — CSS-first configuration
+   ============================================= */
+
+/* --- Plugin Typography untuk Digital Garden --- */
+@plugin "@tailwindcss/typography";
+
+/* --- Custom Variants untuk Dual Theme (Tailwind v4) --- */
+@custom-variant theme-glass (&:where([data-theme="glass"] *));
+@custom-variant theme-minimal (&:where([data-theme="minimal"] *));
+
+/* --- Tema Default: Clinical Light (Arsitek Sistem) --- */
+:root,
+[data-theme="minimal"] {
+  --color-bg: #F5F5F7;
+  --color-text: #111111;
+  --color-accent: #00FF41;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --radius-card: 12px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --blur-glass: 0px;
+  --font-body: "JetBrains Mono", monospace;
+}
+
+/* --- Tema Liquid Glass + OLED Dark (Visioner Futuristik) --- */
+[data-theme="glass"] {
+  --color-bg: #000000;
+  --color-text: #EDEDED;
+  --color-accent: #00FF41;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --radius-card: 24px;
+  --shadow-card: 0 8px 32px rgba(0, 255, 65, 0.08);
+  --blur-glass: 8px;
+  --font-body: "JetBrains Mono", monospace;
+}
+
+/* --- Base Styles --- */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Utility: Glass Surface --- */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* --- Utility: Bento Card --- */
+.bento-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+/* --- Respect user's motion preferences --- */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
