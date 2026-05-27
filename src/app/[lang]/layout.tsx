@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import '../globals.css';
 import { getDictionary } from '@/shared/locales/config';
-import { LanguageSwitcher } from '@/features/language-switcher/ui/LanguageSwitcher';
 import { SettingsPanel } from '@/features/settings-panel/ui/SettingsPanel';
 import { themeScript } from '@/shared/lib/theme-script';
 import { ThemeProvider } from '@/features/theme-switcher/ui/ThemeProvider';

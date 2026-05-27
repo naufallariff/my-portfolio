@@ -13,27 +13,27 @@ const languages = [
 ];
 
 const designThemes = [
-    { code: 'minimal', label: 'Minimalist', desc: 'Soft & Structural' },
-    { code: 'glass', label: 'Liquid Glass', desc: 'Tactile & Premium' },
+    { code: 'minimal' as const, label: 'Minimalist', desc: 'Soft & Structural' },
+    { code: 'glass' as const, label: 'Liquid Glass', desc: 'Tactile & Premium' },
 ];
 
 const colorThemes = [
-    { code: 'clinical', label: 'Clinical Light', desc: '#F5F5F7' },
-    { code: 'oled', label: 'OLED Dark', desc: '#000000' },
-    { code: 'determinate', label: 'Determinate', desc: 'Algorithmic' },
+    { code: 'clinical' as const, label: 'Clinical Light', desc: '#F5F5F7' },
+    { code: 'oled' as const, label: 'OLED Dark', desc: '#000000' },
+    { code: 'determinate' as const, label: 'Determinate', desc: 'Algorithmic' },
 ];
 
 // --- Komponen Dropdown ---
-function Dropdown({
+function Dropdown<T extends string>({
     label,
     options,
     current,
     onChange,
 }: {
     label: string;
-    options: { code: string; label: string; desc?: string }[];
-    current: string;
-    onChange: (code: string) => void;
+    options: { code: T; label: string; desc?: string }[];
+    current: T;
+    onChange: (code: T) => void;
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
@@ -55,7 +55,7 @@ function Dropdown({
             </label>
             <button
                 onClick={() => setOpen(!open)}
-                className="flex w-full items-center justify-between rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 text-sm transition-colors hover:border-[var(--color-accent)]"
+                className="flex w-full items-center justify-between rounded-lg border border-(--color-border) bg-(--color-bg) px-3 py-2 text-sm transition-colors hover:border-(--color-accent)"
                 aria-haspopup="listbox"
                 aria-expanded={open}
             >
@@ -66,7 +66,7 @@ function Dropdown({
             </button>
             {open && (
                 <ul
-                    className="absolute end-0 z-50 mt-1 w-full min-w-[200px] rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] py-1 shadow-lg"
+                    className="absolute inset-e-0 z-50 mt-1 w-full min-w-50 rounded-lg border border-(--color-border) bg-(--color-bg) py-1 shadow-lg"
                     role="listbox"
                 >
                     {options.map((opt) => (
@@ -76,7 +76,7 @@ function Dropdown({
                                 onChange(opt.code);
                                 setOpen(false);
                             }}
-                            className={`flex cursor-pointer items-center justify-between px-3 py-2 text-sm hover:bg-[var(--color-border)] ${opt.code === current ? 'text-[var(--color-accent)]' : ''
+                            className={`flex cursor-pointer items-center justify-between px-3 py-2 text-sm hover:bg-(--color-border) ${opt.code === current ? 'text-(--color-accent)' : ''
                                 }`}
                             role="option"
                             aria-selected={opt.code === current}
@@ -104,7 +104,7 @@ export function SettingsPanel({ currentLang }: { currentLang: string }) {
     };
 
     return (
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 shadow-sm">
+        <div className="rounded-xl border border-(--color-border) bg-(--color-bg) p-4 shadow-sm">
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest opacity-40">Settings</h3>
             <div className="space-y-4">
                 <Dropdown label="Language" options={languages} current={currentLang} onChange={handleLanguageChange} />

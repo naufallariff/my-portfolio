@@ -33,8 +33,8 @@ export function DomainFilter() {
                     key={d.code}
                     onClick={() => handleChange(d.code)}
                     className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active === d.code
-                            ? 'bg-[var(--color-accent)] text-black'
-                            : 'border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-accent)]'
+                            ? 'bg-(--color-accent) text-black'
+                            : 'border border-(--color-border) text-(--color-text) hover:border-(--color-accent)'
                         }`}
                     role="tab"
                     aria-selected={active === d.code}
@@ -44,7 +44,7 @@ export function DomainFilter() {
                     {active === d.code && (
                         <motion.div
                             layoutId="activeDomainTab"
-                            className="absolute inset-0 rounded-full bg-[var(--color-accent)]"
+                            className="absolute inset-0 rounded-full bg-(--color-accent)"
                             style={{ zIndex: -1 }}
                             transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                         />

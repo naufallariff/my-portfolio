@@ -1,6 +1,7 @@
 import { DomainFilter } from '@/features/domain-filter/ui/DomainFilter';
 import { ExperienceGrid } from '@/entities/experience/ui/ExperienceGrid';
 import { experiences } from '@/entities/experience/api/experiences';
+import { getDictionary } from '@/shared/locales/config';
 
 export default async function HomePage({
     params,
@@ -22,7 +23,7 @@ export default async function HomePage({
         <div className="min-h-screen px-4 py-20">
             <div className="mx-auto max-w-5xl">
                 <div className="text-center">
-                    <p className="text-xs tracking-[0.2em] text-[var(--color-accent)]">{dict.hero.status}</p>
+                    <p className="text-xs tracking-[0.2em] text-(--color-accent)">{dict.hero.status}</p>
                     <h1 className="mt-4 text-3xl font-bold sm:text-5xl">{dict.hero.title}</h1>
                     <p className="mt-2 text-sm opacity-70">{dict.hero.subtitle}</p>
                 </div>

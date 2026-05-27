@@ -17,14 +17,14 @@ export function ExperienceCard({ experience, lang }: { experience: Experience; l
         >
             <motion.div layout="position" className="flex items-start justify-between">
                 <div>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-(--color-accent)">
                         {experience.period}
                     </span>
                     <h3 className="mt-1 text-lg font-bold">{experience.title}</h3>
                     <p className="mt-1 text-sm opacity-60">{experience.role}</p>
                 </div>
                 <motion.button
-                    className="rounded-full border border-[var(--color-border)] p-2 text-xs"
+                    className="rounded-full border border-(--color-border) p-2 text-xs"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                 >
@@ -45,14 +45,14 @@ export function ExperienceCard({ experience, lang }: { experience: Experience; l
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="mt-4 border-t border-[var(--color-border)] pt-4">
+                        <div className="mt-4 border-t border-(--color-border) pt-4">
                             <p className="text-sm leading-relaxed">{experience.fullDescription}</p>
 
                             {/* Metrics */}
                             <div className="mt-4 grid grid-cols-2 gap-2">
                                 {experience.metrics.map((m, i) => (
-                                    <div key={i} className="rounded-lg border border-[var(--color-border)] p-2 text-center">
-                                        <p className="text-lg font-bold text-[var(--color-accent)]">{m.value}</p>
+                                    <div key={i} className="rounded-lg border border-(--color-border) p-2 text-center">
+                                        <p className="text-lg font-bold text-(--color-accent)">{m.value}</p>
                                         <p className="text-xs opacity-60">{m.label}</p>
                                     </div>
                                 ))}
@@ -61,7 +61,7 @@ export function ExperienceCard({ experience, lang }: { experience: Experience; l
                             {/* Tags */}
                             <div className="mt-3 flex flex-wrap gap-1">
                                 {experience.tags.map((tag) => (
-                                    <span key={tag} className="rounded-full border border-[var(--color-border)] px-2 py-0.5 text-xs">
+                                    <span key={tag} className="rounded-full border border-(--color-border) px-2 py-0.5 text-xs">
                                         {tag}
                                     </span>
                                 ))}
