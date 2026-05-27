@@ -144,3 +144,4 @@ vite.config.ts.timestamp-*
 
 # Next.js generated types (typedRoutes disabled)
 types/
+next-env.d.ts
