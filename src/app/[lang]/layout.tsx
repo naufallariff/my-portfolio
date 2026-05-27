@@ -3,6 +3,8 @@ import '../globals.css';
 import { getDictionary } from '@/shared/locales/config';
 import { LanguageSwitcher } from '@/features/language-switcher/ui/LanguageSwitcher';
 import { SettingsPanel } from '@/features/settings-panel/ui/SettingsPanel';
+import { themeScript } from '@/shared/lib/theme-script';
+import { ThemeProvider } from '@/features/theme-switcher/ui/ThemeProvider';
 
 /**
  * Generate static paths untuk semua locale yang didukung.
@@ -34,12 +36,14 @@ export default async function RootLayout({ children, params }: { children: React
 
     return (
         <html lang={lang} dir={isRTL ? 'rtl' : 'ltr'} suppressHydrationWarning>
-            <head>...</head>
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+            </head>
             <body className={`antialiased ${isRTL ? 'font-arabic leading-relaxed' : 'font-mono'}`}>
-                <div className="fixed top-4 end-4 z-50">
+                <ThemeProvider>
                     <SettingsPanel currentLang={lang} />
-                </div>
-                <main className="min-h-screen">{children}</main>
+                    <main className="min-h-screen">{children}</main>
+                </ThemeProvider>
             </body>
         </html>
     );

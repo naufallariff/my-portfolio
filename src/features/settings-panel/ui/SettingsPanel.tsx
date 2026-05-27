@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import { useThemeStore } from '@/shared/stores/theme-store';
 
 // --- Data Opsi ---
 const languages = [
@@ -92,6 +93,7 @@ function Dropdown({
 
 // --- Komponen Utama ---
 export function SettingsPanel({ currentLang }: { currentLang: string }) {
+    const { design, color, setDesign, setColor } = useThemeStore();
     const router = useRouter();
     const pathname = usePathname();
 
@@ -106,8 +108,8 @@ export function SettingsPanel({ currentLang }: { currentLang: string }) {
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest opacity-40">Settings</h3>
             <div className="space-y-4">
                 <Dropdown label="Language" options={languages} current={currentLang} onChange={handleLanguageChange} />
-                <Dropdown label="Design Theme" options={designThemes} current="minimal" onChange={() => { }} />
-                <Dropdown label="Color Theme" options={colorThemes} current="clinical" onChange={() => { }} />
+                <Dropdown label="Design Theme" options={designThemes} current={design} onChange={setDesign} />
+                <Dropdown label="Color Theme" options={colorThemes} current={color} onChange={setColor} />
             </div>
         </div>
     );
