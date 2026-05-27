@@ -1,3 +1,4 @@
+# .github/workflows/ci.yml
 name: CI — Lint, Type Check, Build
 
 on:
@@ -24,7 +25,7 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Generate route types
+      - name: Generate Next.js types
         run: npx next typegen
 
       - name: Type Check
