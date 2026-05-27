@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const supportedLocales = ['en', 'id', 'zh', 'ar'];
 const defaultLocale = 'en';
 
-export function proxy(request: NextRequest) { 
+export function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     // Lewati file statis, API, dan asset internal Next.js
