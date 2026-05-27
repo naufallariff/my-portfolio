@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     'node_modules/**',
     'next-env.d.ts',
   ]),
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': ['warn', { caughtErrors: 'none' }],
+    },
+  },
 ]);
 
 export default eslintConfig;
