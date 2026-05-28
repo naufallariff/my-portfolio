@@ -1,50 +1,50 @@
 {
     "meta": {
-        "title": "Muhammad Naufal Arif — Arsitek Perangkat Lunak & Spesialis QA",
+        "title": "Muhammad Naufal Arif — Software Architect & QA Specialist",
         "description": "Memastikan presisi data spasial untuk AI otonom dan membangun sistem web yang skalabel."
     },
     "header": {
         "brand": "M. Naufal Arif",
-        "ariaThemeSwitch": "Ganti tema",
+        "ariaThemeSwitch": "Ubah tema",
         "ariaLanguageSelect": "Pilih bahasa",
         "ariaSettings": "Pengaturan",
         "designMode": "Mode Desain",
-        "minimalist": "Minimalis",
-        "liquidGlass": "Kaca Cair"
+        "minimalist": "Minimalist",
+        "liquidGlass": "Liquid Glass"
     },
     "hero": {
         "name": "Muhammad Naufal Arif",
-        "role": "Spesialis Penjaminan Kualitas Data & Insinyur Perangkat Lunak",
+        "role": "Data Quality Assurance Specialist & Software Engineer",
         "valueProp": "Membangun arsitektur data tanpa cacat. Mengaudit sistem otonom. Merekayasa web.",
         "location": "Jakarta, Indonesia",
-        "status": "Tersedia untuk peluang global"
+        "status": "Terbuka untuk peluang global"
     },
     "manifesto": {
-        "title": "Tentang",
-        "hook": "Saya membangun sistem, dan saya memastikan semuanya berjalan tanpa cela.",
-        "narrative": "Saat ini seorang Spesialis Penjaminan Kualitas Data untuk proyek Autonomous Driving global Tier-1. Peran ini menuntut presisi absolut, toleransi nol cacat, dan konsistensi ketat di seluruh data spasial 3D yang kompleks. Sebelum mendalami infrastruktur data AI, saya membangun fondasi logika melalui rekayasa web full-stack. Pengalaman sebagai Administrator Audit Internal memberi saya perspektif makro terhadap proses bisnis, sementara peran sebagai Teaching Talent mengasah kemampuan komunikasi teknis saya.",
-        "valueProposition": "Saya menggabungkan logika seorang insinyur, mata tajam seorang auditor, dan standar kualitas ketat yang diperlukan untuk AI modern."
+        "title": "Tentang Saya",
+        "hook": "Saya membangun sistem, dan saya memastikan sistem tersebut berjalan tanpa cela.",
+        "narrative": "Saat ini menjadi Data Quality Assurance Specialist untuk proyek Autonomous Driving global Tier-1. Peran ini menuntut presisi absolut, toleransi cacat nol, dan konsistensi ketat di seluruh data spasial 3D yang kompleks. Sebelum mendalami infrastruktur data AI, saya membangun fondasi logika melalui rekayasa web full-stack. Pengalaman sebagai Internal Audit Administrator memberi saya perspektif makro tentang proses bisnis, sementara peran sebagai Teaching Talent mengasah keterampilan komunikasi teknis saya.",
+        "valueProposition": "Saya memadukan logika seorang insinyur, ketajaman mata seorang auditor, dan standar kualitas ketat yang dibutuhkan untuk AI modern."
     },
     "competencies": {
         "title": "Kompetensi Inti",
         "ai": {
-            "title": "Infrastruktur Data AI",
+            "title": "AI Data Infrastructure",
             "skills": [
-                "Penjaminan Kualitas",
-                "Pelacakan Spasio-Temporal",
-                "Pemrosesan Point Cloud 3D",
-                "Validasi Integritas Data"
+                "Quality Assurance",
+                "Spatio-Temporal Tracking",
+                "3D Point Cloud Processing",
+                "Data Integrity Validation"
             ]
         },
         "engineering": {
-            "title": "Rekayasa Perangkat Lunak",
+            "title": "Software Engineering",
             "frontend": "Frontend: React.js, Next.js, Tailwind CSS, TypeScript",
             "backend": "Backend: Node.js, Express.js, Go (Gin), Python (Flask)",
-            "architecture": "Arsitektur: Feature-Sliced Design, Arsitektur Berlapis",
-            "databases": "Basis Data: PostgreSQL, MySQL, SQLite"
+            "architecture": "Architecture: Feature-Sliced Design, Layered Architecture",
+            "databases": "Databases: PostgreSQL, MySQL, SQLite"
         },
         "tools": {
-            "title": "Sistem & Alat",
+            "title": "System & Tools",
             "list": [
                 "Git",
                 "Vercel",
@@ -58,61 +58,61 @@
         "present": "Sekarang",
         "jobs": [
             {
-                "title": "Spesialis Penjaminan Kualitas Data",
+                "title": "Data Quality Assurance Specialist",
                 "company": "PT Daligent Solusi Indonesia (KUPU ID)",
                 "date": "Feb 2026",
                 "endDate": "Sekarang",
-                "description": "Mengelola integritas data untuk model AI Autonomous Driving global Tier-1. Mengaudit segmentasi point cloud 3D yang kompleks (Semantic OCC) dan mencegah kegagalan pelacakan temporal (ID-Switches) pada ribuan objek dinamis dalam tampilan multi-kamera 360° (ODN)."
+                "description": "Mengelola integritas data untuk model AI Autonomous Driving global Tier-1. Mengaudit segmentasi 3D point cloud yang kompleks (Semantic OCC) dan mencegah kegagalan pelacakan temporal (ID-Switches) di ribuan objek dinamis dalam tampilan multi-kamera 360° (ODN)."
             },
             {
-                "title": "Anotator Data",
+                "title": "Data Annotator",
                 "company": "PT Daligent Solusi Indonesia (KUPU ID)",
                 "date": "Feb 2026",
                 "endDate": "Apr 2026",
-                "description": "Memproses dataset spatio-temporal 4D yang kompleks. Memastikan anotasi presisi piksel dan penyelarasan fusi sensor antara LiDAR dan kamera untuk 4D Traffic Sign Reflectivity (TSR)."
+                "description": "Memproses dataset spatio-temporal 4D yang kompleks. Memastikan anotasi presisi tingkat piksel dan penyelarasan fusi sensor antara LiDAR dan kamera untuk 4D Traffic Sign Reflectivity (TSR)."
             },
             {
                 "title": "Teaching Talent",
                 "company": "Akademia by Ruangguru (UOB My Digital Space)",
                 "date": "Okt 2025",
                 "endDate": "Mei 2026",
-                "description": "Membimbing mahasiswa dalam dasar-dasar pengembangan web, menekankan komunikasi teknis dan dokumentasi yang jelas."
+                "description": "Membimbing siswa dalam dasar-dasar pengembangan web, dengan penekanan pada komunikasi teknis dan dokumentasi yang jelas."
             },
             {
-                "title": "Administrator Audit Internal",
+                "title": "Internal Audit Administrator",
                 "company": "PT Panca Mitra Prima Sejahtera",
                 "date": "Nov 2025",
                 "endDate": "Jan 2026",
-                "description": "Mendukung tim audit dalam pengumpulan dan analisis data, mendapatkan perspektif makro tentang proses bisnis yang kompleks dan sistem lawas."
+                "description": "Mendukung tim audit dalam pengumpulan dan analisis data, mendapatkan perspektif makro mengenai proses bisnis yang kompleks dan sistem warisan (legacy systems)."
             }
         ]
     },
     "projects": {
-        "title": "Proyek Unggulan",
+        "title": "Proyek Pilihan",
         "list": [
             {
                 "title": "Phianova v3",
-                "subtitle": "UI Cyber & Persona AI",
-                "tech": "Next.js, API AI",
-                "description": "Antarmuka persona AI dinamis yang dibangun dengan tema 'Cyber UI' yang ketat. Arsitektur inti berfokus pada sistem memori jangka pendek yang kuat yang diatur ulang per sesi, memprioritaskan penanganan konteks langsung daripada penyimpanan jangka panjang."
+                "subtitle": "Cyber UI & AI Persona",
+                "tech": "Next.js, AI API",
+                "description": "Antarmuka persona AI dinamis yang dibangun dengan tema 'Cyber UI' yang ketat. Arsitektur intinya berfokus pada sistem memori jangka pendek yang kuat yang di-reset per sesi, memprioritaskan penanganan konteks secara langsung dibandingkan penyimpanan jangka panjang."
             },
             {
                 "title": "Uwais Telur",
-                "subtitle": "Sistem Transaksi Penjualan",
+                "subtitle": "Sales Transaction System",
                 "tech": "Node.js, Express.js, EJS, SQLite",
-                "description": "Sistem transaksi penjualan full-stack yang dikembangkan menggunakan Rapid Application Development (RAD). Fitur meliputi pencatatan transaksi, manajemen pemasok/pelanggan, pemantauan stok, dan pembuatan faktur."
+                "description": "Sistem transaksi penjualan full-stack yang dikembangkan menggunakan Rapid Application Development (RAD). Fitur yang ada mencakup pencatatan transaksi, manajemen pemasok/pelanggan, pemantauan stok, dan pembuatan faktur."
             },
             {
                 "title": "Dialectica",
-                "subtitle": "Perpustakaan Digital AI",
+                "subtitle": "AI Digital Library",
                 "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
-                "description": "Platform perpustakaan digital yang terintegrasi dengan chatbot bertenaga AI untuk diskusi buku reflektif. Dibangun dengan antarmuka 3-panel responsif dan login Web3 simulasi."
+                "description": "Platform perpustakaan digital yang terintegrasi dengan chatbot berbasis AI untuk diskusi buku yang reflektif. Dibangun dengan antarmuka 3-panel responsif dan simulasi login Web3."
             },
             {
                 "title": "Industrix-Todo",
-                "subtitle": "Demo Arsitektur Berlapis",
+                "subtitle": "Layered Architecture Demo",
                 "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
-                "description": "Aplikasi manajemen tugas yang menunjukkan prinsip arsitektur yang kuat, menggunakan Arsitektur Berlapis pada backend dan frontend modular."
+                "description": "Aplikasi manajemen tugas yang mendemonstrasikan prinsip arsitektur yang kuat, memanfaatkan Layered Architecture pada backend dan frontend modular."
             }
         ]
     },
@@ -122,23 +122,32 @@
             "title": "Sarjana Sistem Informasi",
             "school": "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
             "date": "Sep 2021 – Sep 2025",
-            "detail": "Cumlaude (IPK 3.82). Menerbitkan penelitian tentang sistem transaksi penjualan di Indonesian Journal of Computer Science."
+            "detail": "Cumlaude (IPK 3.82). Menerbitkan riset tentang sistem transaksi penjualan di Indonesian Journal of Computer Science."
         },
         "certifications": [
             "Code Generation and Optimization Using IBM Granite — IBM SkillsBuild (2025)",
-            "Studi Independen - Web Backend Developer — Gamelab Indonesia (2024)",
-            "Studi Independen - Web Development — Infinite Learning (2023)"
+            "Independent Study - Web Backend Developer — Gamelab Indonesia (2024)",
+            "Independent Study - Web Development — Infinite Learning (2023)"
         ]
     },
     "domain": {
         "all": "Semua",
         "ai": "AI & Data",
-        "engineering": "Rekayasa",
+        "engineering": "Software",
         "audit": "Audit",
         "education": "Edukasi"
     },
+    "contact": {
+        "title": "Mari bangun sistem andal bersama.",
+        "subtitle": "Saya terbuka untuk peluang global di bidang data quality assurance dan rekayasa perangkat lunak. Jangan ragu untuk menghubungi saya.",
+        "emailLabel": "Kirim Email",
+        "phoneLabel": "WhatsApp",
+        "linkedinLabel": "LinkedIn",
+        "githubLabel": "GitHub",
+        "resumeLabel": "Unduh Resume"
+    },
     "footer": {
-        "copyright": "© 2026 Muhammad Naufal Arif. Seluruh hak cipta dilindungi."
+        "copyright": "© 2026 Muhammad Naufal Arif. Hak cipta dilindungi."
     },
     "enOnlyNotice": "Dokumentasi teknis hanya tersedia dalam bahasa Inggris."
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Muhammad Naufal Arif — 软件架构师与QA专家",
-    "description": "确保自动驾驶AI的空间数据精度，构建可扩展的Web系统。"
+    "description": "确保自动驾驶AI的空间数据精度并构建可扩展的Web系统。"
   },
   "header": {
     "brand": "M. Naufal Arif",
@@ -9,39 +9,39 @@
     "ariaLanguageSelect": "选择语言",
     "ariaSettings": "设置",
     "designMode": "设计模式",
-    "minimalist": "极简",
-    "liquidGlass": "液态玻璃"
+    "minimalist": "极简主义 (Minimalist)",
+    "liquidGlass": "液态玻璃 (Liquid Glass)"
   },
   "hero": {
     "name": "Muhammad Naufal Arif",
     "role": "数据质量保证专家与软件工程师",
-    "valueProp": "构建零缺陷的数据架构。审计自动驾驶系统。开发Web应用。",
-    "location": "印度尼西亚，雅加达",
-    "status": "开放全球机会"
+    "valueProp": "构建零缺陷的数据架构。审计自主系统。进行Web工程开发。",
+    "location": "印尼，雅加达",
+    "status": "寻求全球机遇"
   },
   "manifesto": {
-    "title": "关于",
-    "hook": "我构建系统，并确保它们完美运行。",
-    "narrative": "目前担任全球一级自动驾驶项目的数据质量保证专家。这项工作要求绝对的精度、零缺陷容忍度以及跨复杂3D空间数据的严格一致性。在深入AI数据基础设施之前，我通过全栈Web工程建立了逻辑基础。内部审计管理员经验让我对业务流程有了宏观视角，而教学人才的角色则磨练了我的技术沟通能力。",
-    "valueProposition": "我结合了工程师的逻辑、审计师的敏锐眼光以及现代AI所需的严格质量标准。"
+    "title": "关于我",
+    "hook": "我构建系统，并确保它们完美无瑕地运行。",
+    "narrative": "目前在Tier-1全球自动驾驶项目中担任数据质量保证专家。该角色要求绝对的精度、零缺陷容忍度以及在复杂的3D空间数据中保持严格的一致性。在深入AI数据基础设施之前，我通过全栈Web开发奠定了逻辑基础。我作为内部审计管理员的经历让我对业务流程有了宏观的视角，而作为教学讲师的角色则磨练了我的技术沟通能力。",
+    "valueProposition": "我结合了工程师的逻辑、审计员的敏锐眼光以及现代AI所需的严格质量标准。"
   },
   "competencies": {
-    "title": "核心能力",
+    "title": "核心竞争力",
     "ai": {
-      "title": "AI数据基础设施",
+      "title": "AI 数据基础设施",
       "skills": [
-        "质量保证",
-        "时空追踪",
-        "3D点云处理",
-        "数据完整性验证"
+        "Quality Assurance",
+        "Spatio-Temporal Tracking",
+        "3D Point Cloud Processing",
+        "Data Integrity Validation"
       ]
     },
     "engineering": {
       "title": "软件工程",
-      "frontend": "前端：React.js、Next.js、Tailwind CSS、TypeScript",
-      "backend": "后端：Node.js、Express.js、Go (Gin)、Python (Flask)",
-      "architecture": "架构：Feature-Sliced Design、分层架构",
-      "databases": "数据库：PostgreSQL、MySQL、SQLite"
+      "frontend": "前端: React.js, Next.js, Tailwind CSS, TypeScript",
+      "backend": "后端: Node.js, Express.js, Go (Gin), Python (Flask)",
+      "architecture": "架构: Feature-Sliced Design, 分层架构",
+      "databases": "数据库: PostgreSQL, MySQL, SQLite"
     },
     "tools": {
       "title": "系统与工具",
@@ -54,36 +54,36 @@
     }
   },
   "experience": {
-    "title": "职业经历",
+    "title": "专业经验",
     "present": "至今",
     "jobs": [
       {
-        "title": "数据质量保证专家",
+        "title": "数据质量保证专家 (Data QA Specialist)",
         "company": "PT Daligent Solusi Indonesia (KUPU ID)",
         "date": "2026年2月",
         "endDate": "至今",
-        "description": "管理全球一级自动驾驶AI模型的数据完整性。审计复杂3D点云分割（Semantic OCC），防止数千个动态物体在360°多摄像头视角（ODN）中的时间追踪失败（ID切换）。"
+        "description": "管理Tier-1全球自动驾驶AI模型的数据完整性。审计复杂的3D点云分割 (Semantic OCC) 并在360°多摄像头视图 (ODN) 中防止数千个动态对象的时序跟踪故障 (ID-Switches)。"
       },
       {
-        "title": "数据标注员",
+        "title": "数据标注员 (Data Annotator)",
         "company": "PT Daligent Solusi Indonesia (KUPU ID)",
         "date": "2026年2月",
         "endDate": "2026年4月",
-        "description": "处理复杂的4D时空数据集。确保LiDAR和摄像头之间传感器融合的像素级精确标注和对齐，用于4D交通标志反射率（TSR）。"
+        "description": "处理复杂的4D时空数据集。确保像素级精度的标注以及LiDAR和摄像头之间的传感器融合对齐，用于4D交通标志反射率 (TSR) 任务。"
       },
       {
-        "title": "教学人才",
-        "company": "Akademia by Ruangguru（UOB My Digital Space）",
+        "title": "教学讲师",
+        "company": "Akademia by Ruangguru (UOB My Digital Space)",
         "date": "2025年10月",
         "endDate": "2026年5月",
-        "description": "指导学生Web开发基础，强调技术沟通和清晰文档。"
+        "description": "指导学生学习Web开发基础知识，强调技术沟通和清晰的文档编写。"
       },
       {
         "title": "内部审计管理员",
         "company": "PT Panca Mitra Prima Sejahtera",
         "date": "2025年11月",
         "endDate": "2026年1月",
-        "description": "支持审计团队进行数据收集和分析，获得对复杂业务流程和遗留系统的宏观视角。"
+        "description": "协助审计团队进行数据收集和分析，对复杂的业务流程和遗留系统获得了宏观的认知。"
       }
     ]
   },
@@ -92,27 +92,27 @@
     "list": [
       {
         "title": "Phianova v3",
-        "subtitle": "赛博UI与AI角色",
-        "tech": "Next.js、AI API",
-        "description": "一个以严格的'赛博UI'主题构建的动态AI角色界面。核心架构专注于每个会话重置的强大短期记忆系统，优先处理即时上下文而非长期存储。"
+        "subtitle": "Cyber UI 与 AI 角色",
+        "tech": "Next.js, AI API",
+        "description": "一个采用严格'Cyber UI'主题构建的动态AI角色界面。核心架构侧重于每次会话重置的强大短期记忆系统，优先考虑即时上下文处理而非长期存储。"
       },
       {
         "title": "Uwais Telur",
         "subtitle": "销售交易系统",
-        "tech": "Node.js、Express.js、EJS、SQLite",
-        "description": "使用快速应用开发（RAD）开发的全栈销售交易系统。功能包括交易记录、供应商/客户管理、库存监控和发票生成。"
+        "tech": "Node.js, Express.js, EJS, SQLite",
+        "description": "使用快速应用程序开发 (RAD) 方法构建的全栈销售交易系统。功能包括交易记录、供应商/客户管理、库存监控和发票生成。"
       },
       {
         "title": "Dialectica",
-        "subtitle": "AI数字图书馆",
-        "tech": "Next.js、TypeScript、TailwindCSS、Gemini API",
-        "description": "集成AI聊天机器人的数字图书馆平台，用于反思性书籍讨论。构建响应式3面板界面和模拟Web3登录。"
+        "subtitle": "AI 数字图书馆",
+        "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
+        "description": "一个集成了AI聊天机器人的数字图书馆平台，用于反射式书籍讨论。采用响应式3面板界面构建，并模拟了Web3登录。"
       },
       {
         "title": "Industrix-Todo",
         "subtitle": "分层架构演示",
-        "tech": "React、TypeScript、Go (Gin)、PostgreSQL、GORM",
-        "description": "展示强大架构原则的任务管理应用，后端采用分层架构，前端模块化。"
+        "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
+        "description": "一个展示强大架构原则的任务管理应用程序，后端采用分层架构，前端采用模块化设计。"
       }
     ]
   },
@@ -122,23 +122,32 @@
       "title": "信息系统学士",
       "school": "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
       "date": "2021年9月 – 2025年9月",
-      "detail": "优等生（GPA 3.82）。在《印度尼西亚计算机科学杂志》发表关于销售交易系统的研究。"
+      "detail": "优等生 (GPA 3.82)。在印度尼西亚计算机科学杂志上发表了关于销售交易系统的研究。"
     },
     "certifications": [
-      "使用IBM Granite进行代码生成与优化 — IBM SkillsBuild（2025）",
-      "独立学习 - Web后端开发 — Gamelab Indonesia（2024）",
-      "独立学习 - Web开发 — Infinite Learning（2023）"
+      "使用IBM Granite进行代码生成和优化 — IBM SkillsBuild (2025)",
+      "独立研究 - Web后端开发 — Gamelab Indonesia (2024)",
+      "独立研究 - Web开发 — Infinite Learning (2023)"
     ]
   },
   "domain": {
     "all": "全部",
     "ai": "AI与数据",
-    "engineering": "工程",
+    "engineering": "软件工程",
     "audit": "审计",
     "education": "教育"
   },
+  "contact": {
+    "title": "让我们共同构建可靠的系统。",
+    "subtitle": "我随时准备接受数据质量保证和软件架构领域的全球机遇。欢迎随时与我联系。",
+    "emailLabel": "发送邮件",
+    "phoneLabel": "WhatsApp",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "resumeLabel": "下载简历"
+  },
   "footer": {
-    "copyright": "© 2026 Muhammad Naufal Arif。保留所有权利。"
+    "copyright": "© 2026 Muhammad Naufal Arif. 保留所有权利。"
   },
   "enOnlyNotice": "技术文档仅提供英文版本。"
 }

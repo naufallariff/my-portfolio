@@ -137,6 +137,15 @@
         "audit": "Audit",
         "education": "Education"
     },
+    "contact": {
+        "title": "Let's build reliable systems together.",
+        "subtitle": "I am available for global opportunities in data quality assurance and software architecture. Feel free to reach out.",
+        "emailLabel": "Send Email",
+        "phoneLabel": "WhatsApp",
+        "linkedinLabel": "LinkedIn",
+        "githubLabel": "GitHub",
+        "resumeLabel": "Resume"
+    },
     "footer": {
         "copyright": "© 2026 Muhammad Naufal Arif. All rights reserved."
     },

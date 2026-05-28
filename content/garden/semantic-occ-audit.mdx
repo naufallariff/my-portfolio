@@ -1,0 +1,62 @@
+---
+title: 'Anatomy of Semantic OCC Quality Assurance'
+description: 'A deep dive into auditing 3D point cloud segmentation for autonomous driving systems — edge bleeding, voxel precision, and spatial consistency across 40+ object categories.'
+date: '2026-04-15'
+published: true
+tags:
+  - Quality Assurance
+  - 3D Point Cloud
+  - Autonomous Driving
+  - Semantic OCC
+  - AI Data Infrastructure
+---
+
+## The Invisible Foundation of Autonomous Perception
+
+Every autonomous vehicle depends on a silent, unglamorous layer of truth: the **semantic occupancy grid**. Before a single decision is made — before the car turns, brakes, or accelerates — the AI must first understand _what_ occupies every cubic centimeter of space around it.
+
+As a Quality Assurance Specialist on the Semantic OCC project, my role sits precisely at this intersection of data integrity and machine perception.
+
+## What Semantic OCC Actually Means
+
+**Semantic Occupancy** (often abbreviated as Semantic OCC) is the process of classifying every voxel (volumetric pixel) in a 3D point cloud into one of 40+ object categories. These range from the obvious — cars, pedestrians, cyclists — to the subtly critical: road markings, traffic cones, guardrails, and even vegetation.
+
+Unlike 2D bounding box annotation, OCC demands:
+
+- **Volumetric precision** — every polygon edge must align with the physical boundary of the object
+- **Spatial consistency** — objects must maintain the same classification across overlapping camera views
+- **Edge fidelity** — the boundary between "car" and "road" must be pixel-perfect at the voxel level
+
+## The Edge Bleeding Problem
+
+The most persistent anomaly in OCC data is **edge bleeding**. This occurs when the segmentation boundary of one object "bleeds" into the space of an adjacent object. Imagine a car parked next to a building: at the voxel level, the car's classification might leak into the building's geometry, creating a hybrid "car-building" entity that confuses the perception model.
+
+My QA workflow specifically targets these edge cases:
+
+1. **Identify** bleeding zones through systematic frame-by-frame auditing
+2. **Quantify** the severity: how many voxels are misclassified?
+3. **Document** the pattern for annotation teams
+4. **Validate** corrections across temporal sequences
+
+## Metrics That Matter
+
+In the world of AI data infrastructure, quality is not subjective. We measure it:
+
+| Metric                  | Target                                      | Tool                                 |
+| ----------------------- | ------------------------------------------- | ------------------------------------ |
+| Edge bleeding rate      | < 0.5% of object boundaries                 | Visual inspection + automated checks |
+| Classification accuracy | > 99.7% across all categories               | Proprietary QA suite                 |
+| Temporal consistency    | Zero ID-switches across 20+ frame sequences | Frame-by-frame tracking validation   |
+| Audit throughput        | 12-20+ data sets per day                    | 2-5 hours per complex scene          |
+
+## Why QA Is Not Just "Checking"
+
+There's a common misconception that QA is a lower-tier function — just verifying what others have built. In autonomous driving data pipelines, QA is fundamentally an **engineering discipline**.
+
+Every anomaly I catch is a potential accident prevented. Every edge case I document becomes training data for the next model iteration. And every temporal ID-switch I resolve ensures that the tracking system doesn't suddenly "forget" about a pedestrian mid-sequence.
+
+## Conclusion: Precision as a Product
+
+The systems I audit are not just data — they are the digital representation of the physical world, upon which life-critical decisions will be made. This is why I approach every QA session with the rigor of an architect and the precision of a surgeon.
+
+**Zero-defect tolerance is not a slogan. It is the only acceptable standard.**
