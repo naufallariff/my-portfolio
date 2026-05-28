@@ -14,7 +14,7 @@ interface ProjectGridProps {
             list: Project[];
         };
     };
-    lang: string; // tambahkan prop lang
+    lang: string;
 }
 
 function slugify(text: string): string {
@@ -31,28 +31,48 @@ export function ProjectGrid({ dict, lang }: ProjectGridProps) {
                 <Link
                     key={index}
                     href={`/${lang}/projects/${slugify(project.title)}`}
-                    className="card-interactive pressable group block"
+                    className="card-interactive pressable group block overflow-hidden"
                     role="listitem"
                 >
-                    <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                            <h3 className="text-xl font-semibold text-(--color-text-primary) mb-1 group-hover:text-(--color-accent) transition-colors">
+                    {/* Thumbnail Placeholder */}
+                    <div className="w-full aspect-video bg-(--color-border) flex items-center justify-center">
+                        <span className="text-4xl opacity-20">📁</span>
+                    </div>
+
+                    {/* Konten Kartu */}
+                    <div className="p-6">
+                        <div className="flex items-start justify-between mb-2">
+                            <h3 className="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
                                 {project.title}
                             </h3>
-                            <p className="text-sm font-medium text-(--color-accent) mb-2">
-                                {project.subtitle}
-                            </p>
-                            <p className="text-xs text-(--color-text-muted) mb-4">{project.tech}</p>
-                            <p className="text-sm text-(--color-text-secondary) leading-relaxed line-clamp-3">
-                                {project.description}
-                            </p>
+                            <ArrowUpRight
+                                size={18}
+                                className="text-(--color-text-muted) group-hover:text-(--color-text-primary) transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                                aria-hidden="true"
+                            />
                         </div>
-                        <ArrowUpRight
-                            size={20}
-                            className="text-(--color-text-muted) group-hover:text-(--color-text-primary) transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
-                            aria-hidden="true"
-                        />
+
+                        <p className="text-sm font-medium text-(--color-accent) mb-3">
+                            {project.subtitle}
+                        </p>
+
+                        {/* Tech Tags */}
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                            {project.tech.split(',').map((tech, i) => (
+                                <span
+                                    key={i}
+                                    className="inline-block rounded-full border border-(--color-border) px-2.5 py-0.5 text-xs font-medium text-(--color-text-secondary)"
+                                >
+                                    {tech.trim()}
+                                </span>
+                            ))}
+                        </div>
+
+                        <p className="text-sm text-(--color-text-secondary) leading-relaxed line-clamp-3">
+                            {project.description}
+                        </p>
                     </div>
+
                     <span className="sr-only">
                         View project: {project.title} — {project.subtitle}
                     </span>
