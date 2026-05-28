@@ -28,7 +28,6 @@ interface BentoAboutSkillsProps {
 export function BentoAboutSkills({ dict }: BentoAboutSkillsProps) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* About Me (Lebar 2 kolom di md) */}
             <div className="surface-panel p-6 md:p-8 md:col-span-2 flex flex-col justify-between">
                 <div>
                     <h2 className="text-2xl font-bold text-(--color-text-primary) mb-4">
@@ -52,7 +51,6 @@ export function BentoAboutSkills({ dict }: BentoAboutSkillsProps) {
                 </a>
             </div>
 
-            {/* Quick Contact (Sempit kanan) */}
             <div className="surface-panel p-6 md:p-8 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                     <MapPin size={18} className="text-(--color-accent)" />
@@ -77,7 +75,6 @@ export function BentoAboutSkills({ dict }: BentoAboutSkillsProps) {
                 </div>
             </div>
 
-            {/* Technologies (Baris penuh di bawah) */}
             <div className="surface-panel p-6 md:p-8 md:col-span-3">
                 <h3 className="text-lg font-semibold text-(--color-text-primary) mb-4">
                     Technologies I Work With
@@ -93,7 +90,7 @@ export function BentoAboutSkills({ dict }: BentoAboutSkillsProps) {
                     ].map((tech, i) => (
                         <div
                             key={i}
-                            className="flex flex-col items-center gap-2 p-3 rounded-(--radius-md) bg-(--color-border) hover:bg-(--color-border-strong) transition-colors"
+                            className="flex flex-col items-center gap-2 p-3 rounded-xl bg-(--color-border) hover:bg-(--color-border-strong) transition-colors"
                         >
                             <tech.icon size={24} className="text-(--color-accent)" />
                             <span className="text-xs font-medium text-(--color-text-secondary) text-center">

@@ -1,24 +1,22 @@
 import { getDictionary } from '@/shared/locales/config';
 import { Header } from '@/widgets/header/ui/Header';
-import { DomainFilter } from '@/features/domain-filter/ui/DomainFilter';
 import { ExperienceTimeline } from '@/entities/experience/ui/ExperienceTimeline';
 import { ProjectGrid } from '@/entities/experience/ui/ProjectGrid';
 import { BentoAboutSkills } from '@/widgets/home-page/ui/BentoAboutSkills';
+import { CompetenciesFilter } from '@/features/competencies-filter/ui/CompetenciesFilter';
+import { EducationSection } from '@/widgets/home-page/ui/EducationSection';
 import { ContactSection } from '@/widgets/home-page/ui/ContactSection';
 import { FadeUpSection } from '@/shared/ui/FadeUpSection';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Mail } from 'lucide-react';
 import { contactConfig } from '@/shared/config/contact';
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function HomePage({
     params,
-    searchParams,
 }: {
     params: Promise<{ lang: string }>;
-    searchParams: Promise<{ domain?: string }>;
 }) {
     const { lang } = await params;
-    const { domain: _domain } = await searchParams;
     const dict = await getDictionary(lang as 'en' | 'id' | 'zh' | 'ar');
 
     return (
@@ -26,10 +24,10 @@ export default async function HomePage({
             <Header lang={lang} dict={dict} />
             <main className="min-h-screen pt-24 pb-24 md:pt-32 md:pb-32">
                 <div className="mx-auto max-w-6xl px-6">
-                    {/* ========== HERO SECTION (2-Column Asymmetric) ========== */}
+                    {/* ========== HERO SECTION ========== */}
                     <FadeUpSection className="mb-24 md:mb-32">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                            {/* Kolom Kiri: Teks & CTA */}
+                            {/* Kolom Kiri */}
                             <div>
                                 <div className="inline-flex items-center gap-2 rounded-full border border-(--color-border) px-4 py-1.5 text-xs font-medium text-(--color-accent) mb-6">
                                     <span className="relative flex h-2 w-2">
@@ -51,7 +49,7 @@ export default async function HomePage({
                                     {dict.hero.valueProp}
                                 </p>
 
-                                {/* Tombol CTA */}
+                                {/* CTA */}
                                 <div className="flex flex-wrap gap-3 mb-8">
                                     <a href="#projects" className="btn-primary">
                                         View My Work
@@ -62,8 +60,9 @@ export default async function HomePage({
                                     </a>
                                 </div>
 
-                                {/* Social Icons */}
+                                {/* Social Icons (SVG inline) */}
                                 <div className="flex items-center gap-3">
+                                    {/* GitHub */}
                                     <a
                                         href={contactConfig.github}
                                         target="_blank"
@@ -71,8 +70,11 @@ export default async function HomePage({
                                         className="btn-icon"
                                         aria-label="GitHub"
                                     >
-                                        <Github size={20} />
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
                                     </a>
+                                    {/* LinkedIn */}
                                     <a
                                         href={contactConfig.linkedin}
                                         target="_blank"
@@ -80,8 +82,11 @@ export default async function HomePage({
                                         className="btn-icon"
                                         aria-label="LinkedIn"
                                     >
-                                        <Linkedin size={20} />
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                        </svg>
                                     </a>
+                                    {/* Email */}
                                     <a
                                         href={contactConfig.emailUrl}
                                         className="btn-icon"
@@ -92,17 +97,19 @@ export default async function HomePage({
                                 </div>
                             </div>
 
-                            {/* Kolom Kanan: Profile Image & Floating Card */}
+                            {/* Kolom Kanan: Foto Profil */}
                             <div className="relative flex justify-center lg:justify-end">
-                                {/* Foto Profil Placeholder */}
-                                <div className="surface-panel p-4 rounded-(--radius-xl) w-72 h-72 md:w-80 md:h-80 flex items-center justify-center relative z-10">
-                                    <div className="w-full h-full rounded-(--radius-lg) bg-(--color-border) flex items-center justify-center">
-                                        <span className="text-6xl opacity-30">👤</span>
-                                    </div>
+                                <div className="surface-panel p-3 rounded-2xl w-72 h-72 md:w-80 md:h-80 relative z-10 overflow-hidden">
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                                        alt="Profile"
+                                        fill
+                                        className="object-cover rounded-xl"
+                                        sizes="(max-width: 768px) 288px, 320px"
+                                    />
                                 </div>
-
-                                {/* Floating Metric Card */}
-                                <div className="absolute -bottom-4 -left-4 md:-left-8 surface-panel p-4 rounded-(--radius-lg) shadow-lg z-20">
+                                {/* Floating Card */}
+                                <div className="absolute -bottom-4 -left-4 md:-left-8 surface-panel p-4 rounded-xl shadow-lg z-20">
                                     <div className="flex items-center gap-2">
                                         <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
                                             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,19 +128,16 @@ export default async function HomePage({
 
                     <hr className="border-(--color-border) my-16 md:my-24" />
 
-                    {/* ========== BENTO ABOUT & SKILLS ========== */}
+                    {/* ========== ABOUT & QUICK CONTACT ========== */}
                     <FadeUpSection className="mb-24 md:mb-32">
                         <BentoAboutSkills dict={dict} lang={lang} />
                     </FadeUpSection>
 
                     <hr className="border-(--color-border) my-16 md:my-24" />
 
-                    {/* ========== EXPERIENCE ========== */}
-                    <FadeUpSection className="mb-16">
-                        <h2 className="section-title">{dict.experience.title}</h2>
-                        <DomainFilter dict={dict} />
-                    </FadeUpSection>
+                    {/* ========== EXPERIENCE TIMELINE ========== */}
                     <FadeUpSection className="mb-24 md:mb-32">
+                        <h2 className="section-title">{dict.experience.title}</h2>
                         <ExperienceTimeline dict={dict} />
                     </FadeUpSection>
 
@@ -147,12 +151,26 @@ export default async function HomePage({
 
                     <hr className="border-(--color-border) my-16 md:my-24" />
 
+                    {/* ========== COMPETENCIES FILTER ========== */}
+                    <FadeUpSection className="mb-24 md:mb-32">
+                        <h2 className="section-title">{dict.competencies.title}</h2>
+                        <CompetenciesFilter />
+                    </FadeUpSection>
+
+                    <hr className="border-(--color-border) my-16 md:my-24" />
+
+                    {/* ========== EDUCATION & COURSES ========== */}
+                    <FadeUpSection className="mb-24 md:mb-32">
+                        <EducationSection dict={dict} />
+                    </FadeUpSection>
+
+                    <hr className="border-(--color-border) my-16 md:my-24" />
+
                     {/* ========== CONTACT ========== */}
                     <FadeUpSection id="contact">
                         <ContactSection dict={dict} />
                     </FadeUpSection>
 
-                    {/* Footer */}
                     <footer className="text-center text-xs text-(--color-text-secondary) opacity-50 pt-16 pb-8 border-t border-(--color-border)">
                         <p>{dict.footer.copyright}</p>
                     </footer>

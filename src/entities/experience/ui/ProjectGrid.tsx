@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
@@ -18,10 +19,7 @@ interface ProjectGridProps {
 }
 
 function slugify(text: string): string {
-    return text
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, '');
+    return text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
 export function ProjectGrid({ dict, lang }: ProjectGridProps) {
@@ -34,12 +32,17 @@ export function ProjectGrid({ dict, lang }: ProjectGridProps) {
                     className="card-interactive pressable group block overflow-hidden"
                     role="listitem"
                 >
-                    {/* Thumbnail Placeholder */}
-                    <div className="w-full aspect-video bg-(--color-border) flex items-center justify-center">
-                        <span className="text-4xl opacity-20">📁</span>
+                    {/* Thumbnail dengan next/image */}
+                    <div className="w-full aspect-video relative overflow-hidden">
+                        <Image
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+                            alt={project.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                     </div>
 
-                    {/* Konten Kartu */}
                     <div className="p-6">
                         <div className="flex items-start justify-between mb-2">
                             <h3 className="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
@@ -52,11 +55,8 @@ export function ProjectGrid({ dict, lang }: ProjectGridProps) {
                             />
                         </div>
 
-                        <p className="text-sm font-medium text-(--color-accent) mb-3">
-                            {project.subtitle}
-                        </p>
+                        <p className="text-sm font-medium text-(--color-accent) mb-3">{project.subtitle}</p>
 
-                        {/* Tech Tags */}
                         <div className="flex flex-wrap gap-1.5 mb-3">
                             {project.tech.split(',').map((tech, i) => (
                                 <span
@@ -73,9 +73,7 @@ export function ProjectGrid({ dict, lang }: ProjectGridProps) {
                         </p>
                     </div>
 
-                    <span className="sr-only">
-                        View project: {project.title} — {project.subtitle}
-                    </span>
+                    <span className="sr-only">View project: {project.title}</span>
                 </Link>
             ))}
         </div>
