@@ -62,7 +62,7 @@
                 "company": "PT Daligent Solusi Indonesia (KUPU ID)",
                 "date": "Feb 2026",
                 "endDate": "Sekarang",
-                "description": "Mengelola integritas data untuk model AI autonomous driving global Tier-1. Mengaudit segmentasi 3D point cloud yang kompleks (Semantic OCC) dan mencegah kegagalan pelacakan temporal (ID-Switches) di ribuan objek dinamis dalam tampilan multi-kamera 360° (ODN)."
+                "description": "Mengelola integritas data untuk model AI Autonomous Driving global Tier-1. Mengaudit segmentasi 3D point cloud yang kompleks (Semantic OCC) dan mencegah kegagalan pelacakan temporal (ID-Switches) di ribuan objek dinamis dalam tampilan multi-kamera 360° (ODN)."
             },
             {
                 "title": "Data Annotator",
@@ -94,24 +94,28 @@
                 "title": "Phianova v3",
                 "subtitle": "Cyber UI & AI Persona",
                 "tech": "Next.js, AI API",
+                "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop",
                 "description": "Antarmuka persona AI dinamis yang dibangun dengan tema 'Cyber UI' yang ketat. Arsitektur intinya berfokus pada sistem memori jangka pendek yang kuat yang di-reset per sesi, memprioritaskan penanganan konteks secara langsung dibandingkan penyimpanan jangka panjang."
             },
             {
                 "title": "Uwais Telur",
                 "subtitle": "Sales Transaction System",
                 "tech": "Node.js, Express.js, EJS, SQLite",
+                "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
                 "description": "Sistem transaksi penjualan full-stack yang dikembangkan menggunakan Rapid Application Development (RAD). Fitur yang ada mencakup pencatatan transaksi, manajemen pemasok/pelanggan, pemantauan stok, dan pembuatan faktur."
             },
             {
                 "title": "Dialectica",
                 "subtitle": "AI Digital Library",
                 "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
+                "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop",
                 "description": "Platform perpustakaan digital yang terintegrasi dengan chatbot berbasis AI untuk diskusi buku yang reflektif. Dibangun dengan antarmuka 3-panel responsif dan simulasi login Web3."
             },
             {
                 "title": "Industrix-Todo",
                 "subtitle": "Layered Architecture Demo",
                 "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
+                "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop",
                 "description": "Aplikasi manajemen tugas yang mendemonstrasikan prinsip arsitektur yang kuat, memanfaatkan Layered Architecture pada backend dan frontend modular."
             }
         ]

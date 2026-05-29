@@ -10,6 +10,7 @@ import { FadeUpSection } from '@/shared/ui/FadeUpSection';
 import { ArrowDown, Mail } from 'lucide-react';
 import { contactConfig } from '@/shared/config/contact';
 import Image from 'next/image';
+import { GardenShowcase } from '@/widgets/home-page/ui/GardenShowcase';
 
 export default async function HomePage({
     params,
@@ -155,6 +156,12 @@ export default async function HomePage({
                     {/* ========== EDUCATION & COURSES ========== */}
                     <FadeUpSection className="mb-24 md:mb-32">
                         <EducationSection dict={dict} />
+                    </FadeUpSection>
+
+                    <hr className="border-(--color-border) my-16 md:my-24" />
+
+                    <FadeUpSection className="mb-24 md:mb-32">
+                        <GardenShowcase lang={lang} />
                     </FadeUpSection>
                 </div>
             </main>

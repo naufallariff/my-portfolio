@@ -7,6 +7,7 @@ interface Project {
     subtitle: string;
     tech: string;
     description: string;
+    image: string;
 }
 
 interface ProjectSliderProps {
@@ -32,10 +33,9 @@ export function ProjectSlider({ dict, lang }: ProjectSliderProps) {
                     className="scroll-item card-interactive pressable group block overflow-hidden"
                     role="listitem"
                 >
-                    {/* Thumbnail */}
-                    <div className="w-full aspect-video relative overflow-hidden rounded-t-(--radius-lg)">
+                    <div className="w-full aspect-video relative overflow-hidden rounded-t-lg">
                         <Image
-                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+                            src={project.image}
                             alt={project.title}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-500"

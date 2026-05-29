@@ -91,7 +91,7 @@ export function ExperienceTimeline({ dict }: ExperienceTimelineProps) {
                             {company.roles.map((role, j) => (
                                 <div key={j} className="relative group">
                                     {/* Bulatan Indikator Sub */}
-                                    <div className="absolute -left-[17px] md:-left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-(--color-border) group-hover:bg-(--color-accent) transition-colors ring-2 ring-(--color-bg-base)" />
+                                    <div className="absolute -left-4.25 md:-left-5.25 top-1.5 w-2.5 h-2.5 rounded-full bg-(--color-border) group-hover:bg-(--color-accent) transition-colors ring-2 ring-(--color-bg-base)" />
 
                                     <div className="card-interactive p-5 md:p-6 group-hover:border-(--color-accent) transition-colors">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2">
