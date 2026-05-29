@@ -62,7 +62,7 @@
                 "company": "PT Daligent Solusi Indonesia (KUPU ID)",
                 "date": "Feb 2026",
                 "endDate": "Present",
-                "description": "Managing data integrity for a Tier-1 global Autonomous Driving AI model. Auditing complex 3D point cloud segmentation (Semantic OCC) and preventing temporal tracking failures (ID-Switches) across thousands of dynamic objects in 360° multi-camera views (ODN)."
+                "description": "Managed data integrity for a Tier-1 global autonomous driving AI model. Audited complex 3D point cloud segmentation (Semantic OCC) and prevented temporal tracking failures (ID-Switches) across thousands of dynamic objects in 360° multi-camera views (ODN)."
             },
             {
                 "title": "Data Annotator",
