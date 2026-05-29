@@ -27,9 +27,34 @@ Unlike 2D bounding box annotation, OCC demands:
 - **Spatial consistency** — objects must maintain the same classification across overlapping camera views
 - **Edge fidelity** — the boundary between "car" and "road" must be pixel-perfect at the voxel level
 
+## 2D vs 3D Annotation: Why the Shift Matters
+
+| Aspect | 2D Bounding Box | 3D Semantic OCC |
+|--------|-----------------|-----------------|
+| **Representation** | Flat rectangle around object | Volumetric polygon enclosing object |
+| **Spatial depth** | None — single plane | Full 360° spatial awareness |
+| **Edge precision** | Approximate bounding box | Exact voxel-level boundary |
+| **Object overlap** | No overlap handling | Precise separation of adjacent objects |
+| **Use case** | Basic object detection | Autonomous navigation & path planning |
+
+The shift from 2D to 3D is not incremental — it's a paradigm change. Every additional dimension multiplies the complexity of quality assurance.
+
 ## The Edge Bleeding Problem
 
-The most persistent anomaly in OCC data is **edge bleeding**. This occurs when the segmentation boundary of one object "bleeds" into the space of an adjacent object. Imagine a car parked next to a building: at the voxel level, the car's classification might leak into the building's geometry, creating a hybrid "car-building" entity that confuses the perception model.
+The most persistent anomaly in OCC data is **edge bleeding**. This occurs when the segmentation boundary of one object "bleeds" into the space of an adjacent object.
+
+```json
+// Example: Edge bleeding anomaly record
+{
+  "frame_id": 14582,
+  "anomaly_type": "edge_bleeding",
+  "object_a": "car",
+  "object_b": "building",
+  "bleeding_voxels": 340,
+  "severity": "medium",
+  "resolution": "manual_correction_required"
+}
+```
 
 My QA workflow specifically targets these edge cases:
 
@@ -38,16 +63,24 @@ My QA workflow specifically targets these edge cases:
 3. **Document** the pattern for annotation teams
 4. **Validate** corrections across temporal sequences
 
+## Temporal Consistency & ID-Switch Prevention
+
+Beyond spatial precision lies an even harder problem: **temporal consistency**. When tracking objects across 20+ consecutive frames, a single mislabeled ID can cascade into hundreds of errors downstream.
+
+> "An ID-switch is not just a labeling mistake — it's a lie told to the AI about the physical world."
+
+A car that becomes a truck between frame 15 and frame 16 doesn't just confuse the classifier — it corrupts the tracking model's understanding of object permanence.
+
 ## Metrics That Matter
 
 In the world of AI data infrastructure, quality is not subjective. We measure it:
 
-| Metric                  | Target                                      | Tool                                 |
-| ----------------------- | ------------------------------------------- | ------------------------------------ |
-| Edge bleeding rate      | < 0.5% of object boundaries                 | Visual inspection + automated checks |
-| Classification accuracy | > 99.7% across all categories               | Proprietary QA suite                 |
-| Temporal consistency    | Zero ID-switches across 20+ frame sequences | Frame-by-frame tracking validation   |
-| Audit throughput        | 12-20+ data sets per day                    | 2-5 hours per complex scene          |
+| Metric | Target | Method |
+| --- | --- | --- |
+| Edge bleeding rate | < 0.5% of object boundaries | Visual inspection + automated checks |
+| Classification accuracy | > 99.7% across all categories | Proprietary QA suite |
+| Temporal consistency | Zero ID-switches across 20+ frame sequences | Frame-by-frame tracking validation |
+| Audit throughput | 12–20+ data sets per day | 2–5 hours per complex scene |
 
 ## Why QA Is Not Just "Checking"
 

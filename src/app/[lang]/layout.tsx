@@ -24,6 +24,28 @@ export const metadata: Metadata = {
     title: 'The System Workspace | Muhammad Naufal Arif',
     description: 'System Builder — AI Data Infrastructure, Software Architecture, Audit.',
     icons: { icon: '/favicon.ico' },
+    openGraph: {
+        title: 'Muhammad Naufal Arif — Software Architect & QA Specialist',
+        description: 'Ensuring spatial data precision for autonomous AI and building scalable web systems.',
+        url: 'https://muhammad-naufal-arif.vercel.app',
+        siteName: 'The System Workspace',
+        locale: 'en_US',
+        type: 'website',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+                width: 1200,
+                height: 630,
+                alt: 'Muhammad Naufal Arif — Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Muhammad Naufal Arif — Software Architect & QA Specialist',
+        description: 'Ensuring spatial data precision for autonomous AI and building scalable web systems.',
+        images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop'],
+    },
 };
 
 export default async function RootLayout({
