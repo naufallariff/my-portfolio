@@ -29,10 +29,15 @@ const skills: Skill[] = [
 
 const categories = ['All', 'Web', 'Backend', 'Database', 'Tools'];
 
+const INITIAL_LIMIT = 10;
+
 export function CompetenciesFilter() {
     const [activeCategory, setActiveCategory] = useState('All');
+    const [showAll, setShowAll] = useState(false);
 
     const filtered = activeCategory === 'All' ? skills : skills.filter((s) => s.category === activeCategory);
+    const displayed = showAll ? filtered : filtered.slice(0, INITIAL_LIMIT);
+    const hasMore = filtered.length > INITIAL_LIMIT;
 
     return (
         <div>
@@ -40,7 +45,10 @@ export function CompetenciesFilter() {
                 {categories.map((cat) => (
                     <button
                         key={cat}
-                        onClick={() => setActiveCategory(cat)}
+                        onClick={() => {
+                            setActiveCategory(cat);
+                            setShowAll(false);
+                        }}
                         className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeCategory === cat
                                 ? 'bg-(--color-accent) text-(--color-accent-text)'
                                 : 'text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-border)'
@@ -54,7 +62,7 @@ export function CompetenciesFilter() {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                {filtered.map((skill, i) => (
+                {displayed.map((skill, i) => (
                     <div
                         key={i}
                         className="surface-panel p-4 flex flex-col items-center gap-2 rounded-xl text-center hover:scale-105 transition-transform"
@@ -64,6 +72,17 @@ export function CompetenciesFilter() {
                     </div>
                 ))}
             </div>
+
+            {hasMore && (
+                <div className="text-center mt-6">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="btn-secondary"
+                    >
+                        {showAll ? 'Show Less' : `View All Capabilities (${filtered.length})`}
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
