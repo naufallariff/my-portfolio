@@ -92,10 +92,10 @@
     "list": [
       {
         "title": "Phianova v3",
-        "subtitle": "赛博UI与AI角色",
+        "subtitle": "Cyber UI & AI Persona",
         "tech": "Next.js, AI API",
         "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop",
-        "description": "一个以严格的'赛博UI'主题构建的动态AI角色界面。核心架构专注于每次会话重置的强大短期记忆系统，优先处理即时上下文而非长期存储。",
+        "description": "一个采用严格'Cyber UI'主题构建的动态AI角色界面。核心架构侧重于每次会话重置的强大短期记忆系统。",
         "githubUrl": "https://github.com/naufallariff/phianova-v3",
         "demoUrl": "https://phianova.vercel.app"
       },
@@ -104,16 +104,16 @@
         "subtitle": "销售交易系统",
         "tech": "Node.js, Express.js, EJS, SQLite",
         "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
-        "description": "使用快速应用开发（RAD）开发的全栈销售交易系统。功能包括交易记录、供应商/客户管理、库存监控和发票生成。",
+        "description": "使用快速应用程序开发 (RAD) 方法构建的全栈销售交易系统。功能包括交易记录、供应商/客户管理、库存监控和发票生成。",
         "githubUrl": "https://github.com/naufallariff/uwais-telur",
         "demoUrl": ""
       },
       {
         "title": "Dialectica",
-        "subtitle": "AI数字图书馆",
+        "subtitle": "AI 数字图书馆",
         "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
         "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop",
-        "description": "集成AI聊天机器人的数字图书馆平台，用于反思性书籍讨论。采用响应式3面板界面构建，并模拟了Web3登录。",
+        "description": "一个集成了AI聊天机器人的数字图书馆平台，用于反射式书籍讨论。采用响应式3面板界面构建，并模拟了Web3登录。",
         "githubUrl": "https://github.com/naufallariff/dialectica",
         "demoUrl": "https://dialectica.vercel.app"
       },
@@ -122,7 +122,7 @@
         "subtitle": "分层架构演示",
         "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
         "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop",
-        "description": "一个展示强大架构原则的任务管理应用，后端采用分层架构，前端模块化。",
+        "description": "一个展示强大架构原则的任务管理应用程序，后端采用分层架构，前端采用模块化设计。",
         "githubUrl": "https://github.com/naufallariff/industrix-todo",
         "demoUrl": ""
       }

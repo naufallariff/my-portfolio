@@ -40,7 +40,15 @@ export default async function RootLayout({ children, params }: { children: React
     const palette = cookieStore.get('theme-palette')?.value || 'light';
 
     return (
-        <html lang={lang} dir={isRTL ? 'rtl' : 'ltr'} data-theme={design} data-palette={palette} suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
+        <html
+            lang={lang}
+            dir={isRTL ? 'rtl' : 'ltr'}
+            data-theme={design}
+            data-palette={palette}
+            data-scroll-behavior="smooth"
+            suppressHydrationWarning
+            className={`${inter.variable} ${jetbrainsMono.variable}`}
+        >
             <body className="antialiased font-sans">
                 <ThemeProvider>{children}</ThemeProvider>
             </body>
