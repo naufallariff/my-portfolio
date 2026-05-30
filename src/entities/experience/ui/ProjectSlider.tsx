@@ -8,6 +8,8 @@ interface Project {
     tech: string;
     description: string;
     image: string;
+    githubUrl: string;
+    demoUrl: string;
 }
 
 interface ProjectSliderProps {

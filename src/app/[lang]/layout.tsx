@@ -22,7 +22,14 @@ export const metadata: Metadata = {
         siteName: 'The System Workspace',
         locale: 'en_US',
         type: 'website',
-        images: [{ url: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop', width: 1200, height: 630, alt: 'Muhammad Naufal Arif — Portfolio' }],
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+                width: 1200,
+                height: 630,
+                alt: 'Muhammad Naufal Arif — Portfolio',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
@@ -32,9 +39,16 @@ export const metadata: Metadata = {
     },
 };
 
-export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
+export default async function RootLayout({
+    children,
+    params,
+}: {
+    children: React.ReactNode;
+    params: Promise<{ lang: string }>;
+}) {
     const { lang } = await params;
     const isRTL = lang === 'ar';
+
     const cookieStore = await cookies();
     const design = cookieStore.get('theme-design')?.value || 'modern';
     const palette = cookieStore.get('theme-palette')?.value || 'light';

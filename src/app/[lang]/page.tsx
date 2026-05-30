@@ -4,9 +4,9 @@ import { BentoAboutSkills } from '@/widgets/home-page/ui/BentoAboutSkills';
 import { ExperienceTimeline } from '@/entities/experience/ui/ExperienceTimeline';
 import { ProjectSlider } from '@/entities/experience/ui/ProjectSlider';
 import { EducationSection } from '@/widgets/home-page/ui/EducationSection';
+import { GardenShowcase } from '@/features/digital-garden/ui/GardenShowcase';
 import { MegaFooter } from '@/widgets/home-page/ui/MegaFooter';
 import { FadeUpSection } from '@/shared/ui/FadeUpSection';
-import { GardenShowcase } from '@/features/digital-garden/ui/GardenShowcase';
 
 export default async function HomePage({
     params,
@@ -24,21 +24,29 @@ export default async function HomePage({
                     <FadeUpSection className="mb-24 md:mb-32">
                         <BentoAboutSkills dict={dict} lang={lang} />
                     </FadeUpSection>
+
                     <hr className="divider my-16 md:my-24" />
+
                     <FadeUpSection className="mb-24 md:mb-32">
                         <h2 className="section-title">{dict.experience.title}</h2>
                         <ExperienceTimeline dict={dict} />
                     </FadeUpSection>
+
                     <hr className="divider my-16 md:my-24" />
+
                     <FadeUpSection className="mb-24 md:mb-32" id="projects">
                         <h2 className="section-title">{dict.projects.title}</h2>
                         <ProjectSlider dict={dict} lang={lang} />
                     </FadeUpSection>
+
                     <hr className="divider my-16 md:my-24" />
+
                     <FadeUpSection className="mb-24 md:mb-32">
                         <EducationSection dict={dict} />
                     </FadeUpSection>
+
                     <hr className="divider my-16 md:my-24" />
+
                     <FadeUpSection className="mb-24 md:mb-32">
                         <GardenShowcase lang={lang} />
                     </FadeUpSection>

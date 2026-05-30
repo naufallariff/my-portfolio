@@ -9,7 +9,7 @@ interface MegaFooterProps {
 
 export function MegaFooter({ dict }: MegaFooterProps) {
     return (
-        <footer className="border-t border-(--color-border) mt-24">
+        <footer className="border-t border-(--color-border) mt-24" id="contact">
             <div className="py-16 md:py-24 text-center">
                 <h2 className="text-4xl md:text-6xl font-bold text-(--color-text-primary) mb-4">Have a project in mind?</h2>
                 <p className="text-lg text-(--color-text-secondary) mb-8">Let&apos;s build something great together.</p>

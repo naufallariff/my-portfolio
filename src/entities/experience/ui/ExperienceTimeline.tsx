@@ -67,42 +67,25 @@ export function ExperienceTimeline({ dict }: ExperienceTimelineProps) {
 
     return (
         <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-(--color-border)" />
-
             <div className="space-y-16">
                 {consolidated.map((company, i) => (
                     <div key={i} className="relative pl-12 md:pl-16">
-                        {/* Main indicator dot */}
                         <div className="absolute left-2 md:left-6 top-2 w-4 h-4 rounded-full bg-(--color-accent) ring-4 ring-(--color-bg-base) z-10" />
-
-                        {/* Company header */}
                         <div className="mb-4">
-                            <h3 className="text-xl font-bold text-(--color-text-primary)">
-                                {company.company}
-                            </h3>
+                            <h3 className="text-xl font-bold text-(--color-text-primary)">{company.company}</h3>
                             <p className="text-sm text-(--color-text-muted) mt-1">{company.period}</p>
                         </div>
-
-                        {/* Sub-timeline */}
                         <div className="relative pl-8 md:pl-12 border-l border-dashed border-(--color-border) ml-2 space-y-8">
                             {company.roles.map((role, j) => (
                                 <div key={j} className="relative group">
-                                    {/* Sub indicator dot */}
                                     <div className="absolute -left-4.25 md:-left-5.25 top-1.5 w-2.5 h-2.5 rounded-full bg-(--color-border) group-hover:bg-(--color-accent) transition-colors ring-2 ring-(--color-bg-base)" />
-
                                     <div className="card-interactive p-5 md:p-6 group-hover:border-(--color-accent) transition-colors">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2">
-                                            <h4 className="text-lg font-semibold text-(--color-text-primary)">
-                                                {role.title}
-                                            </h4>
-                                            <span className="text-xs font-medium text-(--color-text-muted) whitespace-nowrap">
-                                                {role.date} — {role.endDate}
-                                            </span>
+                                            <h4 className="text-lg font-semibold text-(--color-text-primary)">{role.title}</h4>
+                                            <span className="text-xs font-medium text-(--color-text-muted) whitespace-nowrap">{role.date} — {role.endDate}</span>
                                         </div>
-                                        <p className="text-sm text-(--color-text-secondary) leading-relaxed">
-                                            {role.description}
-                                        </p>
+                                        <p className="text-sm text-(--color-text-secondary) leading-relaxed">{role.description}</p>
                                     </div>
                                 </div>
                             ))}
