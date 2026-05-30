@@ -88,35 +88,43 @@
         ]
     },
     "projects": {
-        "title": "المشاريع المميزة",
+        "title": "مشاريع مميزة",
         "list": [
             {
                 "title": "Phianova v3",
-                "subtitle": "واجهة Cyber UI وشخصية الذكاء الاصطناعي",
+                "subtitle": "واجهة سايبر وشخصية ذكاء اصطناعي",
                 "tech": "Next.js, AI API",
                 "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop",
-                "description": "واجهة شخصية للذكاء الاصطناعي ديناميكية مصممة بأسلوب 'Cyber UI' الصارم. تركز البنية الأساسية على نظام قوي للذاكرة قصيرة المدى يُعاد تعيينه في كل جلسة، مع إعطاء الأولوية للتعامل الفوري مع السياق على التخزين طويل المدى."
+                "description": "واجهة شخصية ذكاء اصطناعي ديناميكية مبنية بموضوع 'سايبر UI' الصارم. تركز البنية الأساسية على نظام ذاكرة قوي قصير المدى يُعاد ضبطه لكل جلسة، مع إعطاء الأولوية للتعامل مع السياق الفوري على التخزين طويل المدى.",
+                "githubUrl": "https://github.com/naufallariff/phianova-v3",
+                "demoUrl": "https://phianova.vercel.app"
             },
             {
                 "title": "Uwais Telur",
                 "subtitle": "نظام معاملات المبيعات",
                 "tech": "Node.js, Express.js, EJS, SQLite",
                 "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
-                "description": "نظام شامل لمعاملات المبيعات تم تطويره باستخدام تقنية التطوير السريع للتطبيقات (RAD). تشمل الميزات تسجيل المعاملات، إدارة الموردين/العملاء، مراقبة المخزون، وإنشاء الفواتير."
+                "description": "نظام معاملات مبيعات كامل المكدس تم تطويره باستخدام تطوير التطبيقات السريع (RAD). تشمل الميزات تسجيل المعاملات، وإدارة الموردين/العملاء، ومراقبة المخزون، وإنشاء الفواتير.",
+                "githubUrl": "https://github.com/naufallariff/uwais-telur",
+                "demoUrl": ""
             },
             {
                 "title": "Dialectica",
-                "subtitle": "مكتبة رقمية مدعمة بالذكاء الاصطناعي",
+                "subtitle": "مكتبة رقمية بالذكاء الاصطناعي",
                 "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
                 "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop",
-                "description": "منصة مكتبة رقمية متكاملة مع روبوت محادثة مدعوم بالذكاء الاصطناعي لمناقشات الكتب. مصممة بواجهة استجابة تتكون من 3 لوحات وتسجيل دخول Web3 افتراضي."
+                "description": "منصة مكتبة رقمية مدمجة مع روبوت محادثة مدعوم بالذكاء الاصطناعي لمناقشات الكتب التأملية. مبنية بواجهة ثلاثية الألواح سريعة الاستجابة ومحاكاة تسجيل دخول Web3.",
+                "githubUrl": "https://github.com/naufallariff/dialectica",
+                "demoUrl": "https://dialectica.vercel.app"
             },
             {
                 "title": "Industrix-Todo",
-                "subtitle": "عرض الهيكلية متعددة الطبقات",
+                "subtitle": "عرض توضيحي للهندسة الطبقية",
                 "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
                 "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop",
-                "description": "تطبيق لإدارة المهام يوضح مبادئ معمارية قوية، باستخدام الهندسة المعمارية متعددة الطبقات (Layered Architecture) في الخلفية والواجهة الأمامية المعيارية."
+                "description": "تطبيق إدارة مهام يوضح مبادئ معمارية قوية، باستخدام الهندسة المعمارية متعددة الطبقات في الخلفية والواجهة الأمامية المعيارية.",
+                "githubUrl": "https://github.com/naufallariff/industrix-todo",
+                "demoUrl": ""
             }
         ]
     },

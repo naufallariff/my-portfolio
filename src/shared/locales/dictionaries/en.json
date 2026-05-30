@@ -95,7 +95,7 @@
                 "subtitle": "Cyber UI & AI Persona",
                 "tech": "Next.js, AI API",
                 "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop",
-                "description": "...",
+                "description": "A dynamic AI persona interface built with a strict 'Cyber UI' theme. The core architecture focuses on a robust short-term memory system that resets per session, prioritizing immediate context handling over long-term storage.",
                 "githubUrl": "https://github.com/naufallariff/phianova-v3",
                 "demoUrl": "https://phianova.vercel.app"
             },
@@ -104,7 +104,7 @@
                 "subtitle": "Sales Transaction System",
                 "tech": "Node.js, Express.js, EJS, SQLite",
                 "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
-                "description": "...",
+                "description": "A full-stack sales transaction system developed using Rapid Application Development (RAD). Features include transaction recording, supplier/customer management, stock monitoring, and invoice generation.",
                 "githubUrl": "https://github.com/naufallariff/uwais-telur",
                 "demoUrl": ""
             },
@@ -113,7 +113,7 @@
                 "subtitle": "AI Digital Library",
                 "tech": "Next.js, TypeScript, TailwindCSS, Gemini API",
                 "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop",
-                "description": "...",
+                "description": "A digital library platform integrated with an AI-powered chatbot for reflective book discussions. Built with a responsive 3-panel interface and simulated Web3 login.",
                 "githubUrl": "https://github.com/naufallariff/dialectica",
                 "demoUrl": "https://dialectica.vercel.app"
             },
@@ -122,7 +122,7 @@
                 "subtitle": "Layered Architecture Demo",
                 "tech": "React, TypeScript, Go (Gin), PostgreSQL, GORM",
                 "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop",
-                "description": "...",
+                "description": "A task management application demonstrating strong architectural principles, utilizing Layered Architecture on the backend and a modular frontend.",
                 "githubUrl": "https://github.com/naufallariff/industrix-todo",
                 "demoUrl": ""
             }

@@ -6,6 +6,7 @@ import { ProjectSlider } from '@/entities/experience/ui/ProjectSlider';
 import { EducationSection } from '@/widgets/home-page/ui/EducationSection';
 import { MegaFooter } from '@/widgets/home-page/ui/MegaFooter';
 import { FadeUpSection } from '@/shared/ui/FadeUpSection';
+import { GardenShowcase } from '@/features/digital-garden/ui/GardenShowcase';
 
 export default async function HomePage({
     params,
@@ -36,6 +37,10 @@ export default async function HomePage({
                     <hr className="divider my-16 md:my-24" />
                     <FadeUpSection className="mb-24 md:mb-32">
                         <EducationSection dict={dict} />
+                    </FadeUpSection>
+                    <hr className="divider my-16 md:my-24" />
+                    <FadeUpSection className="mb-24 md:mb-32">
+                        <GardenShowcase lang={lang} />
                     </FadeUpSection>
                 </div>
             </main>

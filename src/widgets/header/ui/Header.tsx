@@ -21,7 +21,6 @@ export function Header({ lang }: HeaderProps) {
     const { design, palette, setDesign, setPalette } = useThemeStore();
     const [scrolled, setScrolled] = useState(false);
     const [langOpen, setLangOpen] = useState(false);
-    const [settingsOpen, setSettingsOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -52,7 +51,6 @@ export function Header({ lang }: HeaderProps) {
                 </button>
 
                 <div className="flex items-center gap-3">
-                    {/* Toggle Design (Modern/Liquid) */}
                     <button
                         onClick={() => setDesign(design === 'modern' ? 'liquid' : 'modern')}
                         className="btn-icon"
@@ -61,7 +59,6 @@ export function Header({ lang }: HeaderProps) {
                         {design === 'modern' ? '💧' : '◻'}
                     </button>
 
-                    {/* Toggle Palette (Light/Dark) */}
                     <button
                         onClick={() => setPalette(palette === 'light' ? 'dark' : 'light')}
                         className="btn-icon"
@@ -70,10 +67,9 @@ export function Header({ lang }: HeaderProps) {
                         {palette === 'light' ? '🌙' : '☀'}
                     </button>
 
-                    {/* Language Dropdown */}
                     <div className="relative">
                         <button
-                            onClick={() => { setLangOpen(!langOpen); setSettingsOpen(false); }}
+                            onClick={() => setLangOpen(!langOpen)}
                             className="btn-icon"
                             aria-label="Select language"
                         >
