@@ -3,31 +3,19 @@
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useThemeStore } from '@/shared/stores/theme-store';
-import { Sun, Moon, Globe, Settings } from 'lucide-react';
 
 const languages = [
     { code: 'en', label: 'English' },
     { code: 'id', label: 'Bahasa Indonesia' },
     { code: 'zh', label: '中文' },
     { code: 'ar', label: 'العربية' },
-];
+] as const;
 
 interface HeaderProps {
     lang: string;
-    dict: {
-        header: {
-            brand: string;
-            ariaThemeSwitch: string;
-            ariaLanguageSelect: string;
-            ariaSettings: string;
-            designMode: string;
-            minimalist: string;
-            liquidGlass: string;
-        };
-    };
 }
 
-export function Header({ lang, dict }: HeaderProps) {
+export function Header({ lang }: HeaderProps) {
     const router = useRouter();
     const pathname = usePathname();
     const { design, palette, setDesign, setPalette } = useThemeStore();
@@ -48,10 +36,6 @@ export function Header({ lang, dict }: HeaderProps) {
         setLangOpen(false);
     };
 
-    const toggleTheme = () => {
-        setPalette(palette === 'light' ? 'dark' : 'light');
-    };
-
     return (
         <header
             className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
@@ -64,68 +48,48 @@ export function Header({ lang, dict }: HeaderProps) {
                     onClick={() => router.push(`/${lang}`)}
                     className="text-sm font-semibold tracking-tight text-(--color-text-primary)"
                 >
-                    {dict.header.brand}
+                    M. Naufal Arif
                 </button>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                    {/* Toggle Design (Modern/Liquid) */}
                     <button
-                        onClick={toggleTheme}
-                        className="rounded-full p-2 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                        aria-label={dict.header.ariaThemeSwitch}
+                        onClick={() => setDesign(design === 'modern' ? 'liquid' : 'modern')}
+                        className="btn-icon"
+                        aria-label={`Switch to ${design === 'modern' ? 'Liquid Glass' : 'Modern'} design`}
                     >
-                        {palette === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+                        {design === 'modern' ? '💧' : '◻'}
                     </button>
 
+                    {/* Toggle Palette (Light/Dark) */}
+                    <button
+                        onClick={() => setPalette(palette === 'light' ? 'dark' : 'light')}
+                        className="btn-icon"
+                        aria-label={`Switch to ${palette === 'light' ? 'Dark' : 'Light'} mode`}
+                    >
+                        {palette === 'light' ? '🌙' : '☀'}
+                    </button>
+
+                    {/* Language Dropdown */}
                     <div className="relative">
                         <button
                             onClick={() => { setLangOpen(!langOpen); setSettingsOpen(false); }}
-                            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                            aria-label={dict.header.ariaLanguageSelect}
+                            className="btn-icon"
+                            aria-label="Select language"
                         >
-                            <Globe size={16} />
-                            <span className="hidden sm:inline">{lang.toUpperCase()}</span>
+                            🌐
                         </button>
                         {langOpen && (
-                            <div className="absolute right-0 mt-2 w-48 origin-top-right rounded-2xl bg-white dark:bg-[#1C1C1E] shadow-xl border border-black/5 dark:border-white/10 p-2 backdrop-blur-xl">
+                            <div className="dropdown-menu absolute right-0 mt-2 w-48">
                                 {languages.map((l) => (
                                     <button
                                         key={l.code}
                                         onClick={() => switchLanguage(l.code)}
-                                        className={`w-full rounded-xl px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${lang === l.code ? 'font-semibold text-(--color-accent)' : ''
-                                            }`}
+                                        className={`dropdown-item ${lang === l.code ? 'font-semibold text-(--color-accent)' : ''}`}
                                     >
                                         {l.label}
                                     </button>
                                 ))}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="relative">
-                        <button
-                            onClick={() => { setSettingsOpen(!settingsOpen); setLangOpen(false); }}
-                            className="rounded-full p-2 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
-                            aria-label={dict.header.ariaSettings}
-                        >
-                            <Settings size={18} />
-                        </button>
-                        {settingsOpen && (
-                            <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white dark:bg-[#1C1C1E] shadow-xl border border-black/5 dark:border-white/10 p-2 backdrop-blur-xl">
-                                <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-(--color-text-secondary)">
-                                    {dict.header.designMode}
-                                </p>
-                                <button
-                                    onClick={() => setDesign('modern')}
-                                    className={`w-full rounded-xl px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${design === 'modern' ? 'font-semibold text-(--color-accent)' : ''}`}
-                                >
-                                    {dict.header.minimalist}
-                                </button>
-                                <button
-                                    onClick={() => setDesign('liquid')}
-                                    className={`w-full rounded-xl px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${design === 'liquid' ? 'font-semibold text-(--color-accent)' : ''}`}
-                                >
-                                    {dict.header.liquidGlass}
-                                </button>
                             </div>
                         )}
                     </div>

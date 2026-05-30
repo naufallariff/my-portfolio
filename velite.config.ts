@@ -10,7 +10,6 @@ const articles = defineCollection({
             date: s.isodate(),
             published: s.boolean().default(true),
             tags: s.array(s.string()).default([]),
-            // ✅ Ganti s.text() dengan s.raw()
             body: s.raw(),
         })
         .transform((data) => ({
@@ -19,10 +18,6 @@ const articles = defineCollection({
                 .toLowerCase()
                 .replace(/\s+/g, '-')
                 .replace(/[^a-z0-9-]/g, ''),
-            permalink: `/garden/${data.title
-                .toLowerCase()
-                .replace(/\s+/g, '-')
-                .replace(/[^a-z0-9-]/g, '')}`,
         })),
 });
 

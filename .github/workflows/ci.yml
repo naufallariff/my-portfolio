@@ -2,7 +2,7 @@ name: CI — Lint, Type Check, Build
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -21,13 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Pengecekan tipe dipisah dan tidak bergantung pada typedRoutes
+      - name: Generate Next.js types
+        run: npx next typegen
+
+      - name: Generate Velite types
+        run: npx velite build
+
       - name: Type Check
         run: npx tsc --noEmit --project tsconfig.ci.json
 
       - name: Lint
         run: npm run lint
 
-      # Build berjalan terpisah dengan pengabaian error tipe
       - name: Build
         run: npm run build
